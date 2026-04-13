@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="我是 Jiunhan，工程師背景出身的品牌網站設計師。用系統思維與設計表達，幫助品牌清楚傳遞價值、建立信任、引導決策。">
+  <meta property="og:title" content="關於我 — Jiunhan Design">
+  <meta property="og:description" content="我是 Jiunhan，工程師背景出身的品牌網站設計師。用系統思維與設計表達，幫助品牌清楚傳遞價值、建立信任、引導決策。">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://jiunhan.github.io/jiunhan-design/og-image.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="關於我 — Jiunhan Design">
+  <meta name="twitter:description" content="我是 Jiunhan，工程師背景出身的品牌網站設計師。用系統思維與設計表達，幫助品牌清楚傳遞價值、建立信任、引導決策。">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%23080808'/><text y='.9em' font-size='80' x='10'>✦</text></svg>">
+<title>關於我 — Jiunhan</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Noto+Serif+TC:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{--gold:#C9A84C;--gold-light:#E2C06A;--gold-dim:rgba(201,168,76,.18);--gold-faint:rgba(201,168,76,.07);--black:#080808;--black-soft:#0f0f0f;--black-mid:#161616;--charcoal:#1e1e1e;--ash:#777;--white:#F5F1E8;--ease:cubic-bezier(0.23,1,0.32,1);}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{background:var(--black);color:var(--white);font-family:'Cormorant Garamond',serif;overflow-x:hidden;cursor:none;}
+body::after{content:'';position:fixed;inset:0;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)' opacity='0.035'/%3E%3C/svg%3E");pointer-events:none;z-index:8000;opacity:.4;}
+#cur{position:fixed;width:12px;height:12px;background:var(--gold);border-radius:50%;pointer-events:none;z-index:9999;transform:translate(-50%,-50%);box-shadow:0 0 8px rgba(201,168,76,.6);}
+#cur-ring{position:fixed;width:40px;height:40px;border:1.5px solid rgba(201,168,76,.7);border-radius:50%;pointer-events:none;z-index:9998;transform:translate(-50%,-50%);transition:all .4s var(--ease);}
+@media(hover:none){#cur,#cur-ring{display:none;}body{cursor:auto;}}
+body:has(a:hover) #cur-ring,body:has(button:hover) #cur-ring{transform:translate(-50%,-50%) scale(2.2);opacity:.25;}
+nav{position:fixed;top:0;left:0;right:0;z-index:1000;padding:28px 64px;display:flex;align-items:center;justify-content:space-between;background:rgba(8,8,8,.92);backdrop-filter:blur(24px);border-bottom:1px solid var(--gold-dim);}
+.nav-logo{font-family:'Playfair Display',serif;font-size:20px;letter-spacing:.16em;color:var(--gold);text-decoration:none;}
+.nav-logo em{font-style:italic;color:var(--white);font-size:18px;}
+.nav-links{display:flex;gap:44px;list-style:none;}
+.nav-links a{font-size:11px;letter-spacing:.25em;text-transform:uppercase;color:var(--ash);text-decoration:none;transition:color .4s;position:relative;}
+.nav-links a::after{content:'';position:absolute;bottom:-5px;left:0;right:0;height:1px;background:var(--gold);transform:scaleX(0);transform-origin:left;transition:transform .4s var(--ease);}
+.nav-links a:hover,.nav-links a.active{color:var(--gold);}
+.nav-links a:hover::after,.nav-links a.active::after{transform:scaleX(1);}
+.nav-cta{background:transparent;border:1px solid var(--gold-dim);color:var(--gold);padding:10px 28px;font-family:'Cormorant Garamond',serif;font-size:11px;letter-spacing:.25em;text-transform:uppercase;cursor:none;transition:all .4s var(--ease);text-decoration:none;}
+.nav-cta:hover{background:var(--gold);color:var(--black);}
+
+/* HERO — full-screen split */
+#about-hero{min-height:100vh;display:grid;grid-template-columns:1fr 1fr;position:relative;overflow:hidden;}
+.ah-left{background:var(--black-soft);display:flex;flex-direction:column;justify-content:center;padding:140px 70px 80px;position:relative;border-right:1px solid var(--gold-dim);}
+.ah-left::before{content:'';position:absolute;width:500px;height:500px;background:radial-gradient(circle,rgba(201,168,76,.05),transparent 70%);bottom:-100px;left:-100px;pointer-events:none;}
+.ah-right{display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;background:var(--black);}
+.ah-right::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 70% 60% at 50% 40%,rgba(201,168,76,.06),transparent 70%);}
+
+/* Portrait frame */
+.portrait-wrap{position:relative;width:400px;height:500px;opacity:0;animation:riseIn 1.2s var(--ease) .5s forwards;}
+.portrait-outer{position:absolute;inset:0;border:1px solid rgba(201,168,76,.2);}
+.portrait-inner{position:absolute;inset:18px;background:linear-gradient(145deg,#131005,#1e1a08,#0c0b07);overflow:hidden;display:flex;align-items:center;justify-content:center;}
+.portrait-mono{font-family:'Playfair Display',serif;font-size:200px;font-style:italic;color:rgba(201,168,76,.05);position:absolute;line-height:1;user-select:none;}
+.portrait-content{position:relative;z-index:2;text-align:center;display:flex;flex-direction:column;align-items:center;gap:16px;}
+.portrait-avatar{width:120px;height:120px;border-radius:50%;border:1px solid rgba(201,168,76,.4);display:flex;align-items:center;justify-content:center;font-size:48px;color:rgba(201,168,76,.55);background:rgba(201,168,76,.04);}
+.portrait-name{font-family:'Playfair Display',serif;font-size:26px;font-style:italic;color:rgba(245,241,232,.7);}
+.portrait-title{font-size:10px;letter-spacing:.4em;text-transform:uppercase;color:var(--gold);opacity:.65;}
+.portrait-line{width:40px;height:1px;background:rgba(201,168,76,.3);}
+.portrait-since{font-size:11px;letter-spacing:.2em;color:rgba(245,241,232,.25);}
+.pc{position:absolute;width:18px;height:18px;border-color:var(--gold);border-style:solid;opacity:.45;}
+.pc.tl{top:0;left:0;border-width:1px 0 0 1px;}
+.pc.tr{top:0;right:0;border-width:1px 1px 0 0;}
+.pc.bl{bottom:0;left:0;border-width:0 0 1px 1px;}
+.pc.br{bottom:0;right:0;border-width:0 1px 1px 0;}
+.portrait-stat{position:absolute;background:rgba(10,10,10,.9);border:1px solid var(--gold-dim);backdrop-filter:blur(10px);padding:14px 20px;}
+.portrait-stat.s1{left:-50px;top:20%;}
+.portrait-stat.s2{right:-44px;bottom:25%;}
+.ps-num{font-family:'Playfair Display',serif;font-size:30px;color:var(--gold);display:block;line-height:1;}
+.ps-lbl{font-size:9px;letter-spacing:.22em;text-transform:uppercase;color:var(--ash);margin-top:4px;display:block;}
+
+.ah-eyebrow{font-size:10px;letter-spacing:.45em;text-transform:uppercase;color:var(--gold);display:flex;align-items:center;gap:12px;margin-bottom:24px;opacity:0;animation:riseIn .9s var(--ease) .1s forwards;}
+.ah-eyebrow::before{content:'';width:28px;height:1px;background:var(--gold);}
+.ah-title{font-family:'Playfair Display',serif;font-size:clamp(44px,5.5vw,72px);font-weight:400;line-height:1.08;margin-bottom:28px;opacity:0;animation:riseIn 1s var(--ease) .25s forwards;}
+.ah-title em{font-style:italic;color:var(--gold);display:block;}
+.ah-lead{font-size:17px;font-weight:300;color:rgba(245,241,232,.48);line-height:1.9;margin-bottom:40px;font-family:'Noto Serif TC',serif;opacity:0;animation:riseIn 1s var(--ease) .4s forwards;}
+.ah-stats{display:flex;gap:36px;margin-bottom:44px;opacity:0;animation:riseIn 1s var(--ease) .55s forwards;}
+.as-item{}
+.as-num{font-family:'Playfair Display',serif;font-size:38px;color:var(--gold);display:block;line-height:1;}
+.as-lbl{font-size:9px;letter-spacing:.25em;text-transform:uppercase;color:var(--ash);margin-top:5px;display:block;}
+.ah-cta{opacity:0;animation:riseIn 1s var(--ease) .7s forwards;display:flex;gap:24px;align-items:center;}
+.btn-gold{background:var(--gold);color:var(--black);padding:15px 42px;font-family:'Cormorant Garamond',serif;font-size:12px;letter-spacing:.25em;text-transform:uppercase;text-decoration:none;display:inline-block;transition:all .45s var(--ease);position:relative;overflow:hidden;}
+.btn-gold::before{content:'';position:absolute;inset:0;background:var(--gold-light);transform:translateX(-101%);transition:transform .45s var(--ease);}
+.btn-gold:hover::before{transform:translateX(0);}
+.btn-gold span{position:relative;z-index:1;}
+.btn-link{font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:rgba(245,241,232,.45);text-decoration:none;font-family:'Cormorant Garamond',serif;display:flex;align-items:center;gap:10px;transition:color .4s;}
+.btn-link:hover{color:var(--gold);}
+.arr{transition:transform .4s var(--ease);}
+.btn-link:hover .arr{transform:translateX(6px);}
+
+/* STORY */
+#story{padding:120px 64px;display:grid;grid-template-columns:1fr 1fr;gap:100px;align-items:start;background:var(--black-soft);}
+.story-left{}
+.sec-eyebrow{font-size:10px;letter-spacing:.45em;text-transform:uppercase;color:var(--gold);display:flex;align-items:center;gap:12px;margin-bottom:20px;}
+.sec-eyebrow::before{content:'';width:28px;height:1px;background:var(--gold);}
+.story-title{font-family:'Playfair Display',serif;font-size:clamp(32px,4vw,48px);font-weight:400;line-height:1.12;margin-bottom:32px;}
+.story-title em{font-style:italic;color:var(--gold);}
+.story-body{font-size:16px;font-weight:300;color:rgba(245,241,232,.5);line-height:2;font-family:'Noto Serif TC',serif;display:flex;flex-direction:column;gap:20px;}
+.story-right{padding-top:8px;}
+.story-quote{border-left:2px solid var(--gold);padding:32px 36px;background:var(--black-mid);margin-bottom:40px;position:relative;}
+.story-quote::before{content:'\201C';font-family:'Playfair Display',serif;font-size:80px;color:rgba(201,168,76,.12);position:absolute;top:-10px;left:16px;line-height:1;}
+.sq-text{font-family:'Playfair Display',serif;font-size:20px;font-style:italic;font-weight:400;line-height:1.6;color:rgba(245,241,232,.75);position:relative;z-index:1;margin-bottom:16px;}
+.sq-attr{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);}
+.story-vals{display:flex;flex-direction:column;gap:20px;}
+.sv-item{display:flex;gap:20px;align-items:flex-start;}
+.sv-num{font-family:'Playfair Display',serif;font-size:28px;color:rgba(201,168,76,.2);flex-shrink:0;line-height:1;width:32px;}
+.sv-name{font-size:14px;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);margin-bottom:6px;}
+.sv-desc{font-size:13px;color:rgba(245,241,232,.4);line-height:1.7;font-family:'Noto Serif TC',serif;}
+
+/* EXPERTISE */
+#expertise{padding:120px 64px;background:var(--black);}
+.exp-header{margin-bottom:80px;}
+.exp-title{font-family:'Playfair Display',serif;font-size:clamp(34px,4vw,50px);font-weight:400;line-height:1.12;}
+.exp-title em{font-style:italic;color:var(--gold);}
+.skills-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--gold-dim);}
+.skill-card{background:var(--black);padding:44px 32px;position:relative;overflow:hidden;transition:background .5s var(--ease);}
+.skill-card::after{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:var(--gold);transform:scaleX(0);transform-origin:left;transition:transform .6s var(--ease);}
+.skill-card:hover{background:var(--black-mid);}
+.skill-card:hover::after{transform:scaleX(1);}
+.skill-icon{font-size:26px;color:rgba(201,168,76,.4);margin-bottom:20px;display:block;}
+.skill-name{font-family:'Playfair Display',serif;font-size:18px;font-weight:400;margin-bottom:12px;}
+.skill-tools{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:20px;}
+.skill-tool{font-size:9px;letter-spacing:.18em;text-transform:uppercase;border:1px solid rgba(201,168,76,.2);color:rgba(245,241,232,.35);padding:3px 9px;}
+.skill-bar-wrap{height:2px;background:rgba(201,168,76,.1);position:relative;overflow:hidden;}
+.skill-bar{height:100%;background:var(--gold);transform:scaleX(0);transform-origin:left;transition:transform 1.2s var(--ease);}
+.skill-card.visible .skill-bar{transform:scaleX(1);}
+.skill-pct{font-size:11px;color:var(--gold);margin-top:8px;letter-spacing:.1em;}
+
+/* TIMELINE */
+#timeline{padding:120px 64px;background:var(--black-soft);}
+.timeline-wrap{position:relative;max-width:800px;margin:60px auto 0;padding-left:40px;}
+.timeline-wrap::before{content:'';position:absolute;left:0;top:0;bottom:0;width:1px;background:linear-gradient(to bottom,transparent,var(--gold-dim) 10%,var(--gold-dim) 90%,transparent);}
+.tl-item{position:relative;padding:0 0 56px 52px;}
+.tl-dot{position:absolute;left:-5px;top:6px;width:10px;height:10px;border-radius:50%;border:1px solid var(--gold);background:var(--black);transition:all .4s var(--ease);}
+.tl-item:hover .tl-dot{background:var(--gold);}
+.tl-year{font-size:10px;letter-spacing:.3em;text-transform:uppercase;color:var(--gold);margin-bottom:10px;}
+.tl-title{font-family:'Playfair Display',serif;font-size:20px;font-weight:400;margin-bottom:8px;}
+.tl-company{font-size:12px;letter-spacing:.12em;color:rgba(201,168,76,.6);margin-bottom:10px;}
+.tl-desc{font-size:14px;color:rgba(245,241,232,.42);line-height:1.8;font-family:'Noto Serif TC',serif;}
+
+/* AWARDS */
+#awards{padding:100px 64px;background:var(--black);border-top:1px solid var(--gold-dim);}
+.awards-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--gold-dim);margin-top:56px;}
+.award-item{background:var(--black);padding:40px 32px;display:flex;gap:20px;align-items:flex-start;transition:background .4s var(--ease);}
+.award-item:hover{background:var(--black-mid);}
+.award-icon{font-size:22px;color:rgba(201,168,76,.45);flex-shrink:0;margin-top:3px;}
+.award-year{font-size:9px;letter-spacing:.3em;text-transform:uppercase;color:var(--gold);margin-bottom:6px;display:block;}
+.award-name{font-family:'Playfair Display',serif;font-size:16px;font-weight:400;margin-bottom:4px;line-height:1.3;}
+.award-org{font-size:11px;color:var(--ash);}
+
+/* CLIENTS */
+#clients{padding:100px 64px;background:var(--black-soft);border-top:1px solid var(--gold-dim);}
+.clients-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:1px;background:var(--gold-dim);margin-top:56px;}
+.client-item{background:var(--black-soft);padding:36px 24px;display:flex;align-items:center;justify-content:center;transition:background .4s var(--ease);}
+.client-item:hover{background:var(--black-mid);}
+.client-name{font-family:'Playfair Display',serif;font-size:13px;font-style:italic;color:rgba(245,241,232,.25);text-align:center;transition:color .4s;}
+.client-item:hover .client-name{color:rgba(201,168,76,.6);}
+
+/* CTA */
+#cta-band{padding:120px 64px;text-align:center;position:relative;overflow:hidden;border-top:1px solid var(--gold-dim);}
+#cta-band::before{content:'';position:absolute;width:900px;height:500px;background:radial-gradient(ellipse,rgba(201,168,76,.05),transparent 70%);top:50%;left:50%;transform:translate(-50%,-50%);}
+.cb-eyebrow{font-size:10px;letter-spacing:.45em;text-transform:uppercase;color:var(--gold);display:inline-flex;align-items:center;gap:14px;margin-bottom:28px;}
+.cb-eyebrow::before,.cb-eyebrow::after{content:'';width:36px;height:1px;background:var(--gold);}
+.cb-title{font-family:'Playfair Display',serif;font-size:clamp(38px,5.5vw,68px);font-weight:400;line-height:1.1;margin-bottom:20px;position:relative;z-index:1;}
+.cb-title em{font-style:italic;color:var(--gold);display:block;}
+.cb-sub{font-size:16px;font-weight:300;color:rgba(245,241,232,.4);margin-bottom:52px;font-family:'Noto Serif TC',serif;max-width:460px;margin-left:auto;margin-right:auto;line-height:1.8;}
+.cb-btns{display:flex;gap:16px;justify-content:center;align-items:center;position:relative;z-index:1;}
+footer{padding:52px 64px;border-top:1px solid var(--gold-dim);display:flex;justify-content:space-between;align-items:center;}
+.ft-logo{font-family:'Playfair Display',serif;font-size:18px;letter-spacing:.14em;color:var(--gold);}
+.ft-logo em{font-style:italic;color:rgba(245,241,232,.5);font-size:16px;}
+.ft-copy{font-size:11px;letter-spacing:.12em;color:rgba(245,241,232,.22);}
+.ft-socials{display:flex;gap:20px;}
+.ft-s{width:36px;height:36px;border:1px solid var(--gold-dim);display:flex;align-items:center;justify-content:center;font-size:14px;color:var(--ash);text-decoration:none;transition:all .4s var(--ease);}
+.ft-s:hover{background:var(--gold);border-color:var(--gold);color:var(--black);}
+@keyframes riseIn{from{opacity:0;transform:translateY(28px);}to{opacity:1;transform:translateY(0);}}
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .8s var(--ease),transform .8s var(--ease);}
+.reveal.visible{opacity:1;transform:translateY(0);}
+.d1{transition-delay:.1s;}.d2{transition-delay:.2s;}.d3{transition-delay:.3s;}.d4{transition-delay:.4s;}.d5{transition-delay:.5s;}.d6{transition-delay:.6s;}
+
+/* ── MOBILE RWD ── */
+@media(max-width:768px){
+  /* NAV */
+  nav{padding:18px 24px;}
+  .nav-links{display:none;}
+  .nav-cta{padding:8px 18px;font-size:10px;}
+
+  /* HERO */
+  #about-hero{grid-template-columns:1fr;min-height:auto;}
+  .ah-right{display:none;}
+  .ah-left{padding:110px 28px 64px;border-right:none;border-bottom:1px solid var(--gold-dim);}
+  .ah-title{font-size:clamp(36px,10vw,52px);}
+  .ah-lead{font-size:15px;}
+  .ah-stats{gap:20px;flex-wrap:wrap;}
+  .as-num{font-size:28px;}
+  .ah-cta{flex-direction:column;align-items:flex-start;gap:16px;}
+  .btn-gold{width:100%;text-align:center;padding:16px;}
+  .btn-link{font-size:13px;}
+
+  /* STORY */
+  #story{grid-template-columns:1fr;gap:40px;padding:72px 28px;}
+  .story-title{font-size:clamp(28px,8vw,40px);}
+  .story-body{font-size:15px;}
+  .story-quote{padding:24px 22px;}
+  .sq-text{font-size:17px;}
+  .sv-item{gap:14px;}
+  .sv-num{font-size:22px;width:26px;}
+
+  /* EXPERTISE */
+  #expertise{padding:72px 28px;}
+  .exp-title{font-size:clamp(28px,8vw,40px);}
+  .skills-grid{grid-template-columns:1fr 1fr;gap:1px;}
+  .skill-card{padding:28px 20px;}
+  .skill-name{font-size:15px;}
+
+  /* TIMELINE */
+  #timeline{padding:72px 28px;}
+  .timeline-wrap{padding-left:28px;margin-top:40px;}
+  .tl-item{padding:0 0 40px 36px;}
+  .tl-title{font-size:17px;}
+  .tl-desc{font-size:13px;}
+
+  /* APPROACH */
+  #awards{padding:72px 28px;}
+  .awards-grid{grid-template-columns:1fr;}
+  .award-item{padding:24px 20px;}
+  .award-name{font-size:15px;}
+
+  /* THREE THINGS */
+  #clients{padding:72px 28px;}
+  .clients-grid{grid-template-columns:1fr!important;}
+  .client-item{padding:36px 28px!important;}
+
+  /* CTA */
+  #cta-band{padding:80px 28px;}
+  .cb-title{font-size:clamp(32px,9vw,48px);}
+  .cb-sub{font-size:15px;margin-bottom:36px;}
+  .cb-btns{flex-direction:column;align-items:center;gap:16px;}
+  .cb-btns .btn-gold{width:100%;max-width:320px;text-align:center;}
+
+  /* FOOTER */
+  footer{padding:36px 28px;flex-direction:column;gap:20px;text-align:center;}
+  .ft-socials{justify-content:center;}
+
+  /* Section headings */
+  .sec-eyebrow{font-size:9px;}
+  h2[style]{font-size:clamp(28px,8vw,40px)!important;}
+}
+
+@media(max-width:480px){
+  .skills-grid{grid-template-columns:1fr;}
+  .ah-stats{gap:16px;}
+  .story-vals{gap:16px;}
+}
+</style>
+</head>
+<body>
+<div id="cur"></div><div id="cur-ring"></div>
+
+<nav>
+  <a href="https://jiunhan1101.github.io/jiunhan-design/index.html" class="nav-logo">JIUNHAN <em>Design</em></a>
+  <ul class="nav-links">
+    <li><a href="https://jiunhan1101.github.io/jiunhan-design/services.html">服務項目</a></li>
+    <li><a href="https://jiunhan1101.github.io/jiunhan-design/gallery.html">作品集</a></li>
+    <li><a href="#" class="active">關於我</a></li>
+  </ul>
+  <a href="https://jiunhan1101.github.io/jiunhan-design/contact.html" class="nav-cta">開始合作</a>
+</nav>
+
+<!-- HERO -->
+<section id="about-hero">
+  <div class="ah-left">
+    <div class="ah-eyebrow">About Jiunhan</div>
+    <h1 class="ah-title">設計，是<br><em>有目的的</em><br>溝通工具</h1>
+    <p class="ah-lead">我是 Jiunhan，專注於品牌網站設計，致力於打造兼具美感與轉換力的網站體驗。</p>
+    <div class="ah-stats">
+      <div class="as-item"><span class="as-num">◈</span><span class="as-lbl">品牌網站設計</span></div>
+      <div class="as-item"><span class="as-num">⬡</span><span class="as-lbl">工程 × 設計</span></div>
+      <div class="as-item"><span class="as-num">✦</span><span class="as-lbl">策略思維</span></div>
+    </div>
+    <div class="ah-cta">
+      <a href="https://jiunhan1101.github.io/jiunhan-design/contact.html" class="btn-gold"><span>與我合作</span></a>
+      <a href="https://jiunhan1101.github.io/jiunhan-design/gallery.html" class="btn-link">查看作品集 <span class="arr">→</span></a>
+    </div>
+  </div>
+  <div class="ah-right">
+    <div class="portrait-wrap">
+      <div class="portrait-outer">
+        <div class="pc tl"></div><div class="pc tr"></div>
+        <div class="pc bl"></div><div class="pc br"></div>
+      </div>
+      <div class="portrait-inner">
+        <div class="portrait-mono">J</div>
+        <div class="portrait-content">
+          <div class="portrait-avatar">✦</div>
+          <div class="portrait-name">Jiunhan</div>
+          <div class="portrait-title">Brand Website Designer</div>
+          <div class="portrait-line"></div>
+          <div class="portrait-since">Engineering × Design · Miaoli</div>
+        </div>
+      </div>
+      <div class="portrait-stat s1">
+        <span class="ps-num">工程</span>
+        <span class="ps-lbl">背景出身</span>
+      </div>
+      <div class="portrait-stat s2">
+        <span class="ps-num">設計</span>
+        <span class="ps-lbl">有目的的溝通</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STORY -->
+<section id="story">
+  <div class="story-left reveal">
+    <div class="sec-eyebrow">My Story</div>
+    <h2 class="story-title">工程師出身的<br><em>品牌設計師</em></h2>
+    <div class="story-body">
+      <p>在成為設計師之前，我曾於科技產業擔任工程與管理職。這段經歷讓我習慣以結構與邏輯思考問題，也讓我理解——多數品牌真正的困境，並不是缺少設計，而是缺少清晰且有效的溝通方式。</p>
+      <p>因此，我在設計網站時，不只關注視覺風格，而是從資訊架構、內容層級與使用者路徑出發，規劃一個「能被理解、也能產生行動」的品牌體驗。</p>
+      <p>也因為我曾在高壓且高度理性的環境中工作，我更重視「選擇」本身的意義。這讓我在與品牌合作時，不只是在設計畫面，而是在協助他們釐清真正想被看見的核心價值。</p>
+    </div>
+  </div>
+  <div class="story-right reveal d2">
+    <div class="story-quote">
+      <p class="sq-text">設計不只是呈現，而是一種有目的的溝通工具。每個畫面決策，都應該對應到實際的使用情境與商業目標。</p>
+      <div class="sq-attr">— Jiunhan，設計哲學</div>
+    </div>
+    <div class="story-vals">
+      <div class="sv-item"><div class="sv-num">01</div><div><div class="sv-name">系統思維</div><div class="sv-desc">工程背景養成的結構邏輯，讓設計決策有據可循，而非單純追求形式上的好看。</div></div></div>
+      <div class="sv-item"><div class="sv-num">02</div><div><div class="sv-name">有效溝通</div><div class="sv-desc">從資訊架構與使用者路徑出發，讓網站清楚傳遞價值、建立信任、引導決策。</div></div></div>
+      <div class="sv-item"><div class="sv-num">03</div><div><div class="sv-name">目的導向</div><div class="sv-desc">將抽象想法轉化為具體可被理解的體驗，讓設計不只是風格，而是產生真實影響力的工具。</div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERTISE -->
+<section id="expertise">
+  <div class="exp-header reveal">
+    <div class="sec-eyebrow">Expertise</div>
+    <h2 class="exp-title">專業技能<br><em>與工具</em></h2>
+  </div>
+  <div class="skills-grid">
+    <div class="skill-card reveal d1">
+      <span class="skill-icon">◈</span>
+      <div class="skill-name">品牌網站設計</div>
+      <div class="skill-tools"><span class="skill-tool">Figma</span><span class="skill-tool">Webflow</span><span class="skill-tool">Visual Strategy</span></div>
+      <div class="skill-bar-wrap"><div class="skill-bar" style="width:95%"></div></div>
+      <div class="skill-pct">核心專長</div>
+    </div>
+    <div class="skill-card reveal d2">
+      <span class="skill-icon">◉</span>
+      <div class="skill-name">資訊架構 / UX</div>
+      <div class="skill-tools"><span class="skill-tool">IA Planning</span><span class="skill-tool">User Flow</span><span class="skill-tool">Wireframe</span></div>
+      <div class="skill-bar-wrap"><div class="skill-bar" style="width:92%"></div></div>
+      <div class="skill-pct">核心專長</div>
+    </div>
+    <div class="skill-card reveal d3">
+      <span class="skill-icon">▣</span>
+      <div class="skill-name">系統思維 / 邏輯</div>
+      <div class="skill-tools"><span class="skill-tool">Engineering BG</span><span class="skill-tool">Project Mgmt</span><span class="skill-tool">Structured Thinking</span></div>
+      <div class="skill-bar-wrap"><div class="skill-bar" style="width:90%"></div></div>
+      <div class="skill-pct">工程背景加持</div>
+    </div>
+    <div class="skill-card reveal d4">
+      <span class="skill-icon">◆</span>
+      <div class="skill-name">品牌策略溝通</div>
+      <div class="skill-tools"><span class="skill-tool">Brand Positioning</span><span class="skill-tool">Content Strategy</span><span class="skill-tool">Conversion Design</span></div>
+      <div class="skill-bar-wrap"><div class="skill-bar" style="width:88%"></div></div>
+      <div class="skill-pct">目的導向設計</div>
+    </div>
+  </div>
+</section>
+
+<!-- TIMELINE -->
+<section id="timeline">
+  <div class="reveal">
+    <div class="sec-eyebrow">Journey</div>
+    <h2 style="font-family:'Playfair Display',serif;font-size:clamp(34px,4vw,50px);font-weight:400;line-height:1.12;">設計<em style="font-style:italic;color:var(--gold);">歷程</em></h2>
+  </div>
+  <div class="timeline-wrap reveal">
+    <div class="tl-item">
+      <div class="tl-dot"></div>
+      <div class="tl-year">現在</div>
+      <div class="tl-title">品牌網站設計師</div>
+      <div class="tl-company">獨立接案 · 台北</div>
+      <p class="tl-desc">與創業者與品牌合作，將抽象的想法轉化為具體且可被理解的網站體驗。設計不只是風格，而是能實際產生影響力的溝通工具。</p>
+    </div>
+    <div class="tl-item">
+      <div class="tl-dot"></div>
+      <div class="tl-year">轉型期</div>
+      <div class="tl-title">從工程跨入設計</div>
+      <div class="tl-company">自我探索與學習</div>
+      <p class="tl-desc">帶著工程師的系統思維重新學習設計語言，發現兩者的核心都是解決問題——只是表達方式不同。這個交叉點，成了我最獨特的視角。</p>
+    </div>
+    <div class="tl-item">
+      <div class="tl-dot"></div>
+      <div class="tl-year">過去</div>
+      <div class="tl-title">工程師 / 管理職</div>
+      <div class="tl-company">科技產業</div>
+      <p class="tl-desc">在高壓且高度理性的環境中磨練結構思考與專案管理能力。理解了企業運作邏輯，也深刻感受到「清晰溝通」的稀缺與珍貴。</p>
+    </div>
+  </div>
+</section>
+
+<!-- APPROACH -->
+<section id="awards">
+  <div class="reveal">
+    <div class="sec-eyebrow">My Approach</div>
+    <h2 style="font-family:'Playfair Display',serif;font-size:clamp(34px,4vw,50px);font-weight:400;">我如何<em style="font-style:italic;color:var(--gold);"> 看待設計</em></h2>
+  </div>
+  <div class="awards-grid reveal">
+    <div class="award-item d1"><span class="award-icon">◈</span><div><span class="award-year">原則一</span><div class="award-name">先理解，再動筆</div><div class="award-org">從品牌核心價值出發，而不是從視覺風格出發</div></div></div>
+    <div class="award-item d2"><span class="award-icon">◉</span><div><span class="award-year">原則二</span><div class="award-name">結構決定體驗</div><div class="award-org">資訊架構與使用者路徑，比視覺風格更根本</div></div></div>
+    <div class="award-item d3"><span class="award-icon">▣</span><div><span class="award-year">原則三</span><div class="award-name">美感服務目標</div><div class="award-org">每個視覺選擇，都應對應實際的使用情境</div></div></div>
+    <div class="award-item d4"><span class="award-icon">◆</span><div><span class="award-year">原則四</span><div class="award-name">清晰優於聰明</div><div class="award-org">讓訪客一眼理解你是誰、能做什麼、為何選你</div></div></div>
+    <div class="award-item d5"><span class="award-icon">✦</span><div><span class="award-year">原則五</span><div class="award-name">轉換是設計指標</div><div class="award-org">有效的網站應引導使用者做出決策，而非只是好看</div></div></div>
+    <div class="award-item d6"><span class="award-icon">◈</span><div><span class="award-year">原則六</span><div class="award-name">合作不是服務</div><div class="award-org">釐清你真正想被看見的核心，才是合作的起點</div></div></div>
+  </div>
+</section>
+
+<!-- CLIENTS -->
+<section id="clients">
+  <div class="reveal">
+    <div class="sec-eyebrow">Clients</div>
+    <h2 style="font-family:'Playfair Display',serif;font-size:clamp(34px,4vw,50px);font-weight:400;">一個有效的品牌網站，<br><em style="font-style:italic;color:var(--gold);">應該同時做到三件事</em></h2>
+  </div>
+  <div class="clients-grid reveal" style="grid-template-columns:repeat(3,1fr);">
+    <div class="client-item" style="padding:52px 40px;flex-direction:column;gap:16px;text-align:center;">
+      <div style="font-size:28px;color:rgba(201,168,76,.4);">◈</div>
+      <div class="client-name" style="font-size:17px;color:rgba(245,241,232,.7);font-style:normal;">清楚傳遞價值</div>
+      <div style="font-size:13px;color:rgba(245,241,232,.3);line-height:1.7;font-family:'Noto Serif TC',serif;">讓訪客三秒內理解你是誰、能幫他們做什麼。</div>
+    </div>
+    <div class="client-item" style="padding:52px 40px;flex-direction:column;gap:16px;text-align:center;background:var(--black-mid);">
+      <div style="font-size:28px;color:rgba(201,168,76,.6);">✦</div>
+      <div class="client-name" style="font-size:17px;color:rgba(245,241,232,.85);font-style:normal;">建立信任</div>
+      <div style="font-size:13px;color:rgba(245,241,232,.4);line-height:1.7;font-family:'Noto Serif TC',serif;">透過設計語言、內容與結構，讓品牌值得被相信。</div>
+    </div>
+    <div class="client-item" style="padding:52px 40px;flex-direction:column;gap:16px;text-align:center;">
+      <div style="font-size:28px;color:rgba(201,168,76,.4);">◉</div>
+      <div class="client-name" style="font-size:17px;color:rgba(245,241,232,.7);font-style:normal;">引導使用者決策</div>
+      <div style="font-size:13px;color:rgba(245,241,232,.3);line-height:1.7;font-family:'Noto Serif TC',serif;">每個頁面都有明確的下一步，讓訪客知道該往哪走。</div>
+    </div>
+  </div>
+</section>
+
+<section id="cta-band">
+  <div class="cb-eyebrow reveal">Let's Work Together</div>
+  <h2 class="cb-title reveal">你的品牌，<br><em>值得被清楚看見</em></h2>
+  <p class="cb-sub reveal">告訴我你的品牌現況與困境，我們來討論如何讓網站真正發揮作用。</p>
+  <div class="cb-btns reveal">
+    <a href="https://jiunhan1101.github.io/jiunhan-design/contact.html" class="btn-gold"><span>立即聯絡我</span></a>
+    <a href="https://jiunhan1101.github.io/jiunhan-design/services.html" class="btn-link">查看服務項目 <span class="arr">→</span></a>
+  </div>
+</section>
+
+<footer>
+  <div class="ft-logo">JIUNHAN <em>Design</em></div>
+  <div class="ft-copy">© 2025 Studio Aurum. All rights reserved.</div>
+  <div class="ft-socials">
+    <a href="#" class="ft-s">ig</a><a href="https://www.facebook.com/share/18s5e3B85C/" target="_blank" rel="noopener" class="ft-s">fb</a>
+    <a href="#" class="ft-s">be</a><a href="#" class="ft-s">li</a>
+  </div>
+</footer>
+
+<script>
+const cur=document.getElementById('cur'),ring=document.getElementById('cur-ring');
+let mx=0,my=0,rx=0,ry=0;
+document.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY;cur.style.left=mx+'px';cur.style.top=my+'px';});
+(function loop(){rx+=(mx-rx)*.12;ry+=(my-ry)*.12;ring.style.left=rx+'px';ring.style.top=ry+'px';requestAnimationFrame(loop);})();
+const obs=new IntersectionObserver(e=>{e.forEach(x=>{if(x.isIntersecting){x.target.classList.add('visible');x.target.querySelectorAll('.skill-bar').forEach(b=>{b.style.transform='scaleX('+parseFloat(b.style.width)/100+')';});}});},{threshold:.1});
+document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+</script>
+</body>
+</html>

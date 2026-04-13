@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="與 Jiunhan 開始合作，免費初步諮詢，24 小時內回覆。告訴我你的品牌故事，讓設計真正發揮影響力。">
+  <meta property="og:title" content="聯絡我 — Jiunhan Design">
+  <meta property="og:description" content="與 Jiunhan 開始合作，免費初步諮詢，24 小時內回覆。告訴我你的品牌故事，讓設計真正發揮影響力。">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://jiunhan.github.io/jiunhan-design/og-image.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="聯絡我 — Jiunhan Design">
+  <meta name="twitter:description" content="與 Jiunhan 開始合作，免費初步諮詢，24 小時內回覆。告訴我你的品牌故事，讓設計真正發揮影響力。">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%23080808'/><text y='.9em' font-size='80' x='10'>✦</text></svg>">
+<title>聯絡我們 — Studio Aurum</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Noto+Serif+TC:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{--gold:#C9A84C;--gold-light:#E2C06A;--gold-dim:rgba(201,168,76,.18);--black:#080808;--black-soft:#0f0f0f;--black-mid:#161616;--charcoal:#1e1e1e;--ash:#777;--white:#F5F1E8;--ease:cubic-bezier(0.23,1,0.32,1);}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{background:var(--black);color:var(--white);font-family:'Cormorant Garamond',serif;overflow-x:hidden;cursor:none;min-height:100vh;}
+body::after{content:'';position:fixed;inset:0;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)' opacity='0.035'/%3E%3C/svg%3E");pointer-events:none;z-index:8000;opacity:.4;}
+#cur{position:fixed;width:12px;height:12px;background:var(--gold);border-radius:50%;pointer-events:none;z-index:9999;transform:translate(-50%,-50%);box-shadow:0 0 8px rgba(201,168,76,.6);}
+#cur-ring{position:fixed;width:40px;height:40px;border:1.5px solid rgba(201,168,76,.7);border-radius:50%;pointer-events:none;z-index:9998;transform:translate(-50%,-50%);transition:all .4s var(--ease);}
+@media(hover:none){#cur,#cur-ring{display:none;}body{cursor:auto;}}
+body:has(a:hover) #cur-ring,body:has(button:hover) #cur-ring,body:has(input:focus) #cur-ring,body:has(textarea:focus) #cur-ring{transform:translate(-50%,-50%) scale(2.2);opacity:.25;}
+nav{position:fixed;top:0;left:0;right:0;z-index:1000;padding:28px 64px;display:flex;align-items:center;justify-content:space-between;background:rgba(8,8,8,.92);backdrop-filter:blur(24px);border-bottom:1px solid var(--gold-dim);}
+.nav-logo{font-family:'Playfair Display',serif;font-size:20px;letter-spacing:.16em;color:var(--gold);text-decoration:none;}
+.nav-logo em{font-style:italic;color:var(--white);font-size:18px;}
+.nav-links{display:flex;gap:44px;list-style:none;}
+.nav-links a{font-size:11px;letter-spacing:.25em;text-transform:uppercase;color:var(--ash);text-decoration:none;transition:color .4s;position:relative;}
+.nav-links a::after{content:'';position:absolute;bottom:-5px;left:0;right:0;height:1px;background:var(--gold);transform:scaleX(0);transform-origin:left;transition:transform .4s var(--ease);}
+.nav-links a:hover{color:var(--gold);}
+.nav-links a:hover::after{transform:scaleX(1);}
+.nav-cta{background:var(--gold);color:var(--black);padding:10px 28px;font-family:'Cormorant Garamond',serif;font-size:11px;letter-spacing:.25em;text-transform:uppercase;cursor:none;text-decoration:none;}
+
+/* MAIN LAYOUT */
+#contact-main{
+  min-height:100vh;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  padding-top:88px;
+}
+
+/* LEFT PANEL */
+.cl-left{
+  background:var(--black-soft);
+  padding:80px 70px;
+  display:flex;flex-direction:column;justify-content:center;
+  border-right:1px solid var(--gold-dim);
+  position:relative;overflow:hidden;
+}
+.cl-left::before{content:'';position:absolute;width:500px;height:500px;background:radial-gradient(circle,rgba(201,168,76,.05),transparent 70%);bottom:-150px;left:-100px;pointer-events:none;}
+.cl-eyebrow{font-size:10px;letter-spacing:.45em;text-transform:uppercase;color:var(--gold);display:flex;align-items:center;gap:12px;margin-bottom:24px;opacity:0;animation:riseIn .9s var(--ease) .1s forwards;}
+.cl-eyebrow::before{content:'';width:28px;height:1px;background:var(--gold);}
+.cl-title{font-family:'Playfair Display',serif;font-size:clamp(40px,5vw,64px);font-weight:400;line-height:1.1;margin-bottom:24px;opacity:0;animation:riseIn 1s var(--ease) .25s forwards;}
+.cl-title em{font-style:italic;color:var(--gold);display:block;}
+.cl-desc{font-size:16px;font-weight:300;color:rgba(245,241,232,.45);line-height:1.9;margin-bottom:56px;font-family:'Noto Serif TC',serif;max-width:440px;opacity:0;animation:riseIn 1s var(--ease) .4s forwards;}
+
+/* Contact Info Cards */
+.contact-cards{display:flex;flex-direction:column;gap:1px;background:var(--gold-dim);opacity:0;animation:riseIn 1s var(--ease) .55s forwards;margin-bottom:48px;}
+.cc-item{background:var(--black-soft);padding:24px 28px;display:flex;align-items:center;gap:20px;transition:background .4s var(--ease);}
+.cc-item:hover{background:var(--black-mid);}
+.cc-icon{width:44px;height:44px;border:1px solid var(--gold-dim);display:flex;align-items:center;justify-content:center;font-size:16px;color:var(--gold);flex-shrink:0;transition:all .4s var(--ease);}
+.cc-item:hover .cc-icon{background:var(--gold);color:var(--black);}
+.cc-label{font-size:9px;letter-spacing:.3em;text-transform:uppercase;color:var(--ash);margin-bottom:4px;}
+.cc-value{font-family:'Playfair Display',serif;font-size:16px;font-weight:400;color:rgba(245,241,232,.8);}
+.cc-value a{color:inherit;text-decoration:none;transition:color .3s;}
+.cc-value a:hover{color:var(--gold);}
+
+/* Social Links */
+.social-row{display:flex;gap:10px;opacity:0;animation:riseIn 1s var(--ease) .7s forwards;}
+.soc-link{width:44px;height:44px;border:1px solid var(--gold-dim);display:flex;align-items:center;justify-content:center;font-size:13px;color:var(--ash);text-decoration:none;transition:all .4s var(--ease);font-family:'Cormorant Garamond',serif;}
+.soc-link:hover{background:var(--gold);border-color:var(--gold);color:var(--black);}
+
+/* Response time badge */
+.response-badge{display:inline-flex;align-items:center;gap:10px;border:1px solid var(--gold-dim);padding:10px 18px;font-size:11px;color:rgba(245,241,232,.4);margin-bottom:48px;opacity:0;animation:riseIn 1s var(--ease) .5s forwards;}
+.rb-dot{width:7px;height:7px;background:#4CAF50;border-radius:50%;box-shadow:0 0 0 3px rgba(76,175,80,.15);}
+
+/* RIGHT PANEL — FORM */
+.cl-right{
+  background:var(--black);
+  padding:80px 70px;
+  display:flex;flex-direction:column;justify-content:center;
+  position:relative;
+}
+.cl-right::before{content:'';position:absolute;width:600px;height:400px;background:radial-gradient(ellipse,rgba(201,168,76,.04),transparent 70%);top:0;right:-100px;pointer-events:none;}
+
+.form-eyebrow{font-size:10px;letter-spacing:.45em;text-transform:uppercase;color:var(--gold);display:flex;align-items:center;gap:12px;margin-bottom:36px;opacity:0;animation:riseIn .9s var(--ease) .3s forwards;}
+.form-eyebrow::before{content:'';width:28px;height:1px;background:var(--gold);}
+
+/* FORM STEPS */
+.form-steps{display:flex;gap:0;margin-bottom:48px;opacity:0;animation:riseIn .9s var(--ease) .4s forwards;}
+.fs{flex:1;padding:14px 0;border-bottom:1px solid rgba(201,168,76,.15);display:flex;align-items:center;gap:10px;font-size:11px;letter-spacing:.15em;text-transform:uppercase;color:rgba(245,241,232,.25);transition:all .4s var(--ease);cursor:none;}
+.fs.active{border-bottom-color:var(--gold);color:var(--gold);}
+.fs.done{border-bottom-color:rgba(201,168,76,.4);color:rgba(201,168,76,.5);}
+.fs-num{width:24px;height:24px;border:1px solid currentColor;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:11px;flex-shrink:0;}
+.fs.done .fs-num{background:rgba(201,168,76,.2);}
+
+/* Form pages */
+.form-page{display:none;opacity:0;animation:riseIn .6s var(--ease) forwards;}
+.form-page.active{display:block;opacity:0;animation:riseIn .6s var(--ease) forwards;}
+
+.field-group{margin-bottom:28px;}
+.field-row{display:grid;grid-template-columns:1fr 1fr;gap:20px;}
+label{display:block;font-size:10px;letter-spacing:.3em;text-transform:uppercase;color:var(--ash);margin-bottom:10px;}
+label span{color:var(--gold);}
+input,select,textarea{
+  width:100%;background:transparent;
+  border:none;border-bottom:1px solid rgba(201,168,76,.2);
+  color:var(--white);padding:12px 0;
+  font-family:'Cormorant Garamond',serif;font-size:16px;
+  outline:none;transition:border-color .4s var(--ease);
+  -webkit-appearance:none;
+}
+select{cursor:none;background:var(--black);}
+select option{background:var(--black-mid);}
+input:focus,select:focus,textarea:focus{border-bottom-color:var(--gold);}
+input::placeholder,textarea::placeholder{color:rgba(245,241,232,.2);font-style:italic;}
+textarea{resize:none;min-height:100px;line-height:1.7;}
+
+.radio-group{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;}
+.radio-opt{position:relative;}
+.radio-opt input[type="radio"]{position:absolute;opacity:0;width:0;height:0;}
+.radio-label{display:flex;align-items:center;gap:10px;padding:14px 16px;border:1px solid rgba(201,168,76,.18);cursor:none;transition:all .4s var(--ease);font-size:13px;color:rgba(245,241,232,.5);}
+.radio-dot{width:8px;height:8px;border:1px solid rgba(201,168,76,.4);border-radius:50%;flex-shrink:0;transition:all .3s;}
+.radio-opt input:checked+.radio-label{border-color:var(--gold);color:var(--white);}
+.radio-opt input:checked+.radio-label .radio-dot{background:var(--gold);border-color:var(--gold);}
+.radio-label:hover{border-color:rgba(201,168,76,.4);color:rgba(245,241,232,.8);}
+
+/* Budget slider */
+.budget-display{text-align:center;font-family:'Playfair Display',serif;font-size:28px;color:var(--gold);margin-bottom:16px;}
+.budget-display small{font-size:14px;font-family:'Cormorant Garamond',serif;color:var(--ash);}
+input[type="range"]{padding:0;border:none;appearance:none;-webkit-appearance:none;height:2px;background:rgba(201,168,76,.15);cursor:none;border-radius:0;}
+input[type="range"]::-webkit-slider-thumb{-webkit-appearance:none;width:16px;height:16px;background:var(--gold);border-radius:50%;cursor:none;}
+input[type="range"]::-moz-range-thumb{width:16px;height:16px;background:var(--gold);border-radius:50%;border:none;cursor:none;}
+
+/* Form navigation */
+.form-nav{display:flex;align-items:center;justify-content:space-between;margin-top:40px;}
+.btn-next,.btn-prev,.btn-submit{font-family:'Cormorant Garamond',serif;font-size:12px;letter-spacing:.22em;text-transform:uppercase;cursor:none;transition:all .45s var(--ease);border:none;position:relative;overflow:hidden;}
+.btn-next,.btn-submit{background:var(--gold);color:var(--black);padding:15px 44px;}
+.btn-next::before,.btn-submit::before{content:'';position:absolute;inset:0;background:var(--gold-light);transform:translateX(-101%);transition:transform .45s var(--ease);}
+.btn-next:hover::before,.btn-submit:hover::before{transform:translateX(0);}
+.btn-next span,.btn-submit span{position:relative;z-index:1;}
+.btn-prev{background:none;border:1px solid rgba(201,168,76,.25);color:var(--ash);padding:14px 28px;}
+.btn-prev:hover{border-color:var(--gold);color:var(--gold);}
+.step-hint{font-size:10px;letter-spacing:.2em;color:rgba(245,241,232,.25);}
+
+/* Progress bar */
+.form-progress{height:2px;background:rgba(201,168,76,.1);position:relative;margin-bottom:40px;opacity:0;animation:riseIn .9s var(--ease) .5s forwards;}
+.form-progress-fill{height:100%;background:var(--gold);transition:width .6s var(--ease);}
+
+/* SUCCESS */
+#success-state{display:none;text-align:center;padding:40px 0;}
+.success-icon{width:80px;height:80px;border:1px solid var(--gold);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:28px;color:var(--gold);margin:0 auto 28px;}
+.success-title{font-family:'Playfair Display',serif;font-size:32px;font-weight:400;margin-bottom:16px;}
+.success-title em{font-style:italic;color:var(--gold);}
+.success-desc{font-size:15px;color:rgba(245,241,232,.45);line-height:1.9;font-family:'Noto Serif TC',serif;max-width:380px;margin:0 auto 36px;}
+.btn-gold-outline{display:inline-block;border:1px solid var(--gold);color:var(--gold);padding:14px 36px;font-family:'Cormorant Garamond',serif;font-size:12px;letter-spacing:.22em;text-transform:uppercase;text-decoration:none;transition:all .4s var(--ease);}
+.btn-gold-outline:hover{background:var(--gold);color:var(--black);}
+
+footer{padding:52px 64px;border-top:1px solid var(--gold-dim);display:flex;justify-content:space-between;align-items:center;background:var(--black);}
+.ft-logo{font-family:'Playfair Display',serif;font-size:18px;letter-spacing:.14em;color:var(--gold);}
+.ft-logo em{font-style:italic;color:rgba(245,241,232,.5);font-size:16px;}
+.ft-copy{font-size:11px;letter-spacing:.12em;color:rgba(245,241,232,.22);}
+.ft-socials{display:flex;gap:20px;}
+.ft-s{width:36px;height:36px;border:1px solid var(--gold-dim);display:flex;align-items:center;justify-content:center;font-size:14px;color:var(--ash);text-decoration:none;transition:all .4s var(--ease);}
+.ft-s:hover{background:var(--gold);border-color:var(--gold);color:var(--black);}
+@keyframes riseIn{from{opacity:0;transform:translateY(24px);}to{opacity:1;transform:translateY(0);}}
+
+/* ── MOBILE RWD ── */
+@media(max-width:768px){
+  nav{padding:18px 24px;}
+  .nav-links{display:none;}
+  .nav-cta{padding:8px 18px;font-size:10px;}
+
+  #contact-main{grid-template-columns:1fr;padding-top:72px;}
+
+  .cl-left{padding:52px 28px;border-right:none;border-bottom:1px solid var(--gold-dim);}
+  .cl-title{font-size:clamp(34px,10vw,50px);}
+  .cl-desc{font-size:15px;margin-bottom:32px;}
+  .response-badge{font-size:10px;padding:8px 14px;margin-bottom:32px;}
+  .contact-cards{margin-bottom:32px;}
+  .cc-item{padding:18px 20px;gap:14px;}
+  .cc-icon{width:38px;height:38px;font-size:14px;}
+  .cc-value{font-size:14px;}
+
+  .cl-right{padding:48px 28px 60px;}
+  .form-eyebrow{margin-bottom:24px;}
+  .form-steps{gap:0;overflow-x:auto;}
+  .fs{padding:14px 12px;font-size:9px;white-space:nowrap;flex-shrink:0;}
+  .fs-num{width:20px;height:20px;font-size:10px;}
+  .form-progress{margin-bottom:28px;}
+
+  .field-row{grid-template-columns:1fr;}
+  input,select,textarea{font-size:16px;} /* prevent zoom on iOS */
+  .radio-group{grid-template-columns:1fr 1fr;}
+  .radio-label{padding:11px 12px;font-size:12px;}
+
+  .budget-display{font-size:22px;}
+  .form-nav{flex-direction:column-reverse;gap:12px;align-items:stretch;}
+  .btn-next,.btn-submit{text-align:center;padding:16px;}
+  .btn-prev{text-align:center;padding:14px;}
+  .step-hint{text-align:center;}
+
+  footer{padding:32px 24px;flex-direction:column;gap:16px;text-align:center;}
+  .ft-socials{justify-content:center;}
+}
+@media(max-width:480px){
+  .radio-group{grid-template-columns:1fr;}
+  .social-row{flex-wrap:wrap;}
+}
+</style>
+</head>
+<body>
+<div id="cur"></div><div id="cur-ring"></div>
+
+<nav>
+  <a href="https://jiunhan1101.github.io/jiunhan-design/index.html" class="nav-logo">STUDIO <em>Aurum</em></a>
+  <ul class="nav-links">
+    <li><a href="https://jiunhan1101.github.io/jiunhan-design/services.html">服務項目</a></li>
+    <li><a href="https://jiunhan1101.github.io/jiunhan-design/gallery.html">作品集</a></li>
+    <li><a href="https://jiunhan1101.github.io/jiunhan-design/about.html">關於我</a></li>
+  </ul>
+  <a href="https://jiunhan1101.github.io/jiunhan-design/contact.html" class="nav-cta">開始合作</a>
+</nav>
+
+<div id="contact-main">
+  <!-- LEFT -->
+  <div class="cl-left">
+    <div class="cl-eyebrow">Get In Touch</div>
+    <h1 class="cl-title">讓我們<br><em>開始對話</em></h1>
+    <p class="cl-desc">告訴我你的品牌故事與設計需求，我會在 24 小時內回覆，提供免費初步諮詢。</p>
+
+    <div class="response-badge">
+      <span class="rb-dot"></span>
+      目前狀態：接案中 · 通常 24 小時內回覆
+    </div>
+
+    <div class="contact-cards">
+      <div class="cc-item">
+        <div class="cc-icon">✉</div>
+        <div><div class="cc-label">Email</div><div class="cc-value"><a href="/cdn-cgi/l/email-protection#45362c29202b26207d7574747574052228242c296b262a28"><span class="__cf_email__" data-cfemail="6e1d07020b000d0b565e5f5f5e5f2e09030f0702400d0103">[email&#160;protected]</span></a></div></div>
+      </div>
+      <div class="cc-item">
+        <div class="cc-icon">◎</div>
+        <div><div class="cc-label">LINE ID</div><div class="cc-value">@studioaurum</div></div>
+      </div>
+      <div class="cc-item">
+        <div class="cc-icon">✦</div>
+        <div><div class="cc-label">工作室位置</div><div class="cc-value">苗栗，僅提供線上合作</div></div>
+      </div>
+      <div class="cc-item">
+        <div class="cc-icon">◷</div>
+        <div><div class="cc-label">服務時間</div><div class="cc-value">週一至週五 09:00 – 18:00</div></div>
+      </div>
+    </div>
+
+    <div class="social-row">
+      <a href="#" class="soc-link">ig</a>
+      <a href="https://www.facebook.com/share/18s5e3B85C/" target="_blank" rel="noopener" class="soc-link">fb</a>
+      <a href="#" class="soc-link">be</a>
+      <a href="#" class="soc-link">li</a>
+      <a href="#" class="soc-link">yt</a>
+    </div>
+  </div>
+
+  <!-- RIGHT — FORM -->
+  <div class="cl-right">
+    <div class="form-eyebrow">Contact Form</div>
+
+    <!-- Steps indicator -->
+    <div class="form-steps">
+      <div class="fs active" id="step-ind-1"><div class="fs-num">1</div>基本資料</div>
+      <div class="fs" id="step-ind-2"><div class="fs-num">2</div>需求說明</div>
+      <div class="fs" id="step-ind-3"><div class="fs-num">3</div>預算時程</div>
+    </div>
+
+    <!-- Progress -->
+    <div class="form-progress">
+      <div class="form-progress-fill" id="progress-fill" style="width:33%"></div>
+    </div>
+
+    <div id="form-wrap">
+      <!-- PAGE 1 -->
+      <div class="form-page active" id="page-1">
+        <div class="field-row">
+          <div class="field-group">
+            <label>姓名 <span>*</span></label>
+            <input type="text" id="f-name" placeholder="你的名字" autocomplete="off">
+          </div>
+          <div class="field-group">
+            <label>公司 / 品牌名稱</label>
+            <input type="text" id="f-company" placeholder="選填" autocomplete="off">
+          </div>
+        </div>
+        <div class="field-group">
+          <label>Email <span>*</span></label>
+          <input type="email" id="f-email" placeholder="your@email.com" autocomplete="off">
+        </div>
+        <div class="field-group">
+          <label>聯絡電話</label>
+          <input type="tel" id="f-phone" placeholder="09XX-XXX-XXX（選填）" autocomplete="off">
+        </div>
+        <div class="form-nav">
+          <div class="step-hint">步驟 1 / 3</div>
+          <button class="btn-next" onclick="goStep(2)"><span>下一步 →</span></button>
+        </div>
+      </div>
+
+      <!-- PAGE 2 -->
+      <div class="form-page" id="page-2">
+        <div class="field-group">
+          <label>需要的服務類型 <span>*</span></label>
+          <div class="radio-group">
+            <div class="radio-opt"><input type="radio" name="svc" id="svc1" value="brand"><label class="radio-label" for="svc1"><span class="radio-dot"></span>品牌設計 / LOGO</label></div>
+            <div class="radio-opt"><input type="radio" name="svc" id="svc2" value="uiux"><label class="radio-label" for="svc2"><span class="radio-dot"></span>UI / UX 設計</label></div>
+            <div class="radio-opt"><input type="radio" name="svc" id="svc3" value="print"><label class="radio-label" for="svc3"><span class="radio-dot"></span>平面 / 印刷設計</label></div>
+            <div class="radio-opt"><input type="radio" name="svc" id="svc4" value="social"><label class="radio-label" for="svc4"><span class="radio-dot"></span>社群廣告設計</label></div>
+          </div>
+        </div>
+        <div class="field-group">
+          <label>品牌產業類型</label>
+          <select id="f-industry">
+            <option value="" disabled selected>請選擇產業類別</option>
+            <option>精品 / 奢侈品</option>
+            <option>美妝 / 保養</option>
+            <option>科技 / 新創</option>
+            <option>餐飲 / 食品</option>
+            <option>時尚 / 服飾</option>
+            <option>醫療 / 健康</option>
+            <option>金融 / 服務業</option>
+            <option>個人品牌</option>
+            <option>其他</option>
+          </select>
+        </div>
+        <div class="field-group">
+          <label>專案說明 <span>*</span></label>
+          <textarea id="f-desc" placeholder="請描述你的品牌背景、設計需求，以及對最終成果的期望…" rows="4"></textarea>
+        </div>
+        <div class="form-nav">
+          <button class="btn-prev" onclick="goStep(1)">← 上一步</button>
+          <button class="btn-next" onclick="goStep(3)"><span>下一步 →</span></button>
+        </div>
+      </div>
+
+      <!-- PAGE 3 -->
+      <div class="form-page" id="page-3">
+        <div class="field-group">
+          <label>預算範圍</label>
+          <div class="budget-display" id="budget-display">NT$ 30,000 <small>/ 以上可議</small></div>
+          <input type="range" id="f-budget" min="0" max="5" step="1" value="2" oninput="updateBudget(this.value)">
+        </div>
+        <div class="field-group">
+          <label>希望完成時間</label>
+          <div class="radio-group">
+            <div class="radio-opt"><input type="radio" name="timeline" id="t1" value="urgent"><label class="radio-label" for="t1"><span class="radio-dot"></span>急件（2週內）</label></div>
+            <div class="radio-opt"><input type="radio" name="timeline" id="t2" value="normal" checked><label class="radio-label" for="t2"><span class="radio-dot"></span>一般（1個月）</label></div>
+            <div class="radio-opt"><input type="radio" name="timeline" id="t3" value="relaxed"><label class="radio-label" for="t3"><span class="radio-dot"></span>不急（1-3個月）</label></div>
+            <div class="radio-opt"><input type="radio" name="timeline" id="t4" value="tbd"><label class="radio-label" for="t4"><span class="radio-dot"></span>時程待討論</label></div>
+          </div>
+        </div>
+        <div class="field-group">
+          <label>如何找到我們？</label>
+          <select id="f-source">
+            <option value="" disabled selected>請選擇</option>
+            <option>Instagram</option>
+            <option>Facebook</option>
+            <option>Behance</option>
+            <option>Google 搜尋</option>
+            <option>朋友推薦</option>
+            <option>曾合作過</option>
+            <option>其他</option>
+          </select>
+        </div>
+        <div class="form-nav">
+          <button class="btn-prev" onclick="goStep(2)">← 上一步</button>
+          <button class="btn-submit" onclick="submitForm()"><span>送出諮詢 ✦</span></button>
+        </div>
+      </div>
+    </div>
+
+    <!-- SUCCESS -->
+    <div id="success-state">
+      <div class="success-icon">✦</div>
+      <h2 class="success-title">感謝你的<em>聯絡</em></h2>
+      <p class="success-desc">你的訊息已成功送出。我會在 24 小時內親自回覆，期待與你共同打造精彩的品牌視覺！</p>
+      <a href="https://jiunhan1101.github.io/jiunhan-design/index.html" class="btn-gold-outline">回到首頁</a>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="ft-logo">STUDIO <em>Aurum</em></div>
+  <div class="ft-copy">© 2025 Studio Aurum. All rights reserved.</div>
+  <div class="ft-socials">
+    <a href="#" class="ft-s">ig</a><a href="https://www.facebook.com/share/18s5e3B85C/" target="_blank" rel="noopener" class="ft-s">fb</a>
+    <a href="#" class="ft-s">be</a><a href="#" class="ft-s">li</a>
+  </div>
+</footer>
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+// Cursor
+const cur=document.getElementById('cur'),ring=document.getElementById('cur-ring');
+let mx=0,my=0,rx=0,ry=0;
+document.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY;cur.style.left=mx+'px';cur.style.top=my+'px';});
+(function loop(){rx+=(mx-rx)*.12;ry+=(my-ry)*.12;ring.style.left=rx+'px';ring.style.top=ry+'px';requestAnimationFrame(loop);})();
+
+// Step navigation
+let currentStep=1;
+function goStep(n){
+  // Simple validation
+  if(n===2){
+    const name=document.getElementById('f-name').value.trim();
+    const email=document.getElementById('f-email').value.trim();
+    if(!name||!email){
+      document.getElementById('f-name').style.borderBottomColor=name?'rgba(201,168,76,.2)':'#e05555';
+      document.getElementById('f-email').style.borderBottomColor=email?'rgba(201,168,76,.2)':'#e05555';
+      return;
+    }
+  }
+  document.getElementById('page-'+currentStep).classList.remove('active');
+  document.getElementById('page-'+currentStep).style.display='none';
+  // update step indicators
+  const ind=document.getElementById('step-ind-'+currentStep);
+  if(n>currentStep){ind.classList.remove('active');ind.classList.add('done');}
+  else{ind.classList.remove('active','done');}
+  currentStep=n;
+  const page=document.getElementById('page-'+currentStep);
+  page.style.display='block';
+  page.classList.add('active');
+  document.getElementById('step-ind-'+currentStep).classList.add('active');
+  document.getElementById('step-ind-'+currentStep).classList.remove('done');
+  // progress
+  const pct={1:33,2:66,3:100};
+  document.getElementById('progress-fill').style.width=pct[n]+'%';
+}
+
+// Budget slider
+const budgets=['NT$ 5,000 – 15,000','NT$ 15,000 – 30,000','NT$ 30,000 – 50,000','NT$ 50,000 – 100,000','NT$ 100,000+','無上限，以品質為準'];
+function updateBudget(v){
+  document.getElementById('budget-display').innerHTML=budgets[v]+(v<5?' <small>/ 依專案討論</small>':'');
+}
+
+// Submit
+function submitForm(){
+  document.getElementById('form-wrap').style.display='none';
+  

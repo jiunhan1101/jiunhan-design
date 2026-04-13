@@ -1,0 +1,1072 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="專注於品牌網站設計，打造兼具美感與轉換力的網站體驗。結合工程背景與設計思維，讓你的品牌被清楚看見。">
+  <meta property="og:title" content="Jiunhan Design — 品牌網站設計師">
+  <meta property="og:description" content="專注於品牌網站設計，打造兼具美感與轉換力的網站體驗。結合工程背景與設計思維，讓你的品牌被清楚看見。">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://jiunhan.github.io/jiunhan-design/og-image.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Jiunhan Design — 品牌網站設計師">
+  <meta name="twitter:description" content="專注於品牌網站設計，打造兼具美感與轉換力的網站體驗。結合工程背景與設計思維，讓你的品牌被清楚看見。">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%23080808'/><text y='.9em' font-size='80' x='10'>✦</text></svg>">
+<title>Studio Aurum — 設計作品集</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Noto+Serif+TC:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --gold: #C9A84C;
+  --gold-light: #E2C06A;
+  --gold-dim: rgba(201,168,76,0.18);
+  --black: #080808;
+  --black-soft: #0f0f0f;
+  --black-mid: #161616;
+  --charcoal: #222;
+  --ash: #777;
+  --white: #F5F1E8;
+  --ease: cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+*, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--black);
+  color: var(--white);
+  font-family: 'Cormorant Garamond', serif;
+  overflow-x: hidden;
+  cursor: none;
+}
+
+/* ── CURSOR ── */
+#cur {
+  position: fixed;
+  width: 7px; height: 7px;
+  background: var(--gold);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9999;
+  transform: translate(-50%,-50%);
+  transition: transform .1s;
+}
+#cur-ring {
+  position: fixed;
+  width: 34px; height: 34px;
+  border: 1px solid rgba(201,168,76,.5);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9998;
+  transform: translate(-50%,-50%);
+  transition: all .4s var(--ease);
+}
+body:has(a:hover) #cur-ring,
+body:has(button:hover) #cur-ring { transform: translate(-50%,-50%) scale(2.2); opacity:.25; }
+
+/* ── GRAIN ── */
+body::after {
+  content:'';
+  position: fixed; inset:0;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)' opacity='0.035'/%3E%3C/svg%3E");
+  pointer-events: none;
+  z-index: 8000;
+  opacity: .4;
+}
+
+/* ── NAV ── */
+nav {
+  position: fixed; top:0; left:0; right:0;
+  z-index: 1000;
+  padding: 36px 64px;
+  display: flex; align-items:center; justify-content:space-between;
+  transition: all .6s var(--ease);
+}
+nav.scrolled {
+  background: rgba(8,8,8,.88);
+  backdrop-filter: blur(24px);
+  padding: 22px 64px;
+  border-bottom: 1px solid var(--gold-dim);
+}
+.nav-logo {
+  font-family: 'Playfair Display', serif;
+  font-size: 20px;
+  letter-spacing: .16em;
+  color: var(--gold);
+  text-decoration: none;
+}
+.nav-logo em { font-style:italic; color:var(--white); font-size:18px; }
+.nav-links { display:flex; gap:44px; list-style:none; }
+.nav-links a {
+  font-size: 11px;
+  letter-spacing: .25em;
+  text-transform: uppercase;
+  color: var(--ash);
+  text-decoration: none;
+  transition: color .4s;
+  position: relative;
+}
+.nav-links a::after {
+  content:'';
+  position:absolute; bottom:-5px; left:0; right:0;
+  height:1px; background:var(--gold);
+  transform: scaleX(0); transform-origin:left;
+  transition: transform .4s var(--ease);
+}
+.nav-links a:hover { color:var(--gold); }
+.nav-links a:hover::after { transform:scaleX(1); }
+.nav-cta {
+  background: transparent;
+  border: 1px solid var(--gold-dim);
+  color: var(--gold);
+  padding: 10px 28px;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 11px;
+  letter-spacing: .25em;
+  text-transform: uppercase;
+  cursor: none;
+  transition: all .4s var(--ease);
+  text-decoration: none;
+}
+.nav-cta:hover { background: var(--gold); color: var(--black); }
+
+/* ── HERO ── */
+#hero {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  padding: 0 64px;
+}
+
+/* background glow */
+#hero::before {
+  content:'';
+  position:absolute;
+  width: 700px; height: 700px;
+  background: radial-gradient(circle, rgba(201,168,76,.07) 0%, transparent 70%);
+  top: 50%; left: 55%;
+  transform: translate(-50%,-50%);
+  pointer-events: none;
+}
+
+/* decorative vertical rule */
+.hero-rule {
+  position: absolute;
+  left: 50%; top: 14%; bottom: 14%;
+  width: 1px;
+  background: linear-gradient(to bottom, transparent, var(--gold-dim) 30%, var(--gold-dim) 70%, transparent);
+}
+
+.hero-left { padding-top: 120px; padding-bottom: 80px; padding-right: 80px; position:relative; z-index:2; }
+
+.hero-tag {
+  display: inline-flex; align-items:center; gap:14px;
+  font-size: 10px; letter-spacing:.45em; text-transform:uppercase;
+  color: var(--gold); margin-bottom:40px;
+  opacity:0; animation: riseIn .9s var(--ease) .2s forwards;
+}
+.hero-tag::before { content:''; width:36px; height:1px; background:var(--gold); }
+
+h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(50px, 6.5vw, 88px);
+  font-weight: 400;
+  line-height: 1.06;
+  margin-bottom: 36px;
+  opacity:0; animation: riseIn 1s var(--ease) .4s forwards;
+}
+h1 em { display:block; font-style:italic; color:var(--gold); }
+
+.hero-desc {
+  font-size: 17px;
+  font-weight: 300;
+  line-height: 1.9;
+  color: rgba(245,241,232,.48);
+  max-width: 440px;
+  margin-bottom: 56px;
+  font-family: 'Noto Serif TC', serif;
+  opacity:0; animation: riseIn 1s var(--ease) .6s forwards;
+}
+
+.hero-actions {
+  display:flex; align-items:center; gap:32px;
+  opacity:0; animation: riseIn 1s var(--ease) .8s forwards;
+}
+.btn-gold {
+  background: var(--gold);
+  color: var(--black);
+  padding: 15px 42px;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 12px; letter-spacing:.25em; text-transform:uppercase;
+  text-decoration:none; display:inline-block;
+  transition: all .45s var(--ease); position:relative; overflow:hidden;
+}
+.btn-gold::before {
+  content:''; position:absolute; inset:0;
+  background:var(--gold-light);
+  transform:translateX(-101%);
+  transition: transform .45s var(--ease);
+}
+.btn-gold:hover::before { transform:translateX(0); }
+.btn-gold span { position:relative; z-index:1; }
+.btn-outline-link {
+  font-size: 12px; letter-spacing:.25em; text-transform:uppercase;
+  color: rgba(245,241,232,.55); text-decoration:none;
+  display:flex; align-items:center; gap:10px;
+  transition: color .4s;
+}
+.btn-outline-link:hover { color:var(--gold); }
+.arrow { display:inline-block; transition: transform .4s var(--ease); }
+.btn-outline-link:hover .arrow { transform:translateX(6px); }
+
+/* hero right — visual panel */
+.hero-right {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  height: 100vh;
+  opacity:0; animation: riseIn 1.2s var(--ease) .5s forwards;
+}
+
+.hero-frame {
+  position: relative;
+  width: 420px;
+  height: 520px;
+}
+.frame-border {
+  position:absolute; inset:0;
+  border: 1px solid rgba(201,168,76,.22);
+}
+.frame-inner {
+  position:absolute; inset:20px;
+  background: linear-gradient(145deg, #141005 0%, #1e1a0a 40%, #0d0c09 100%);
+  overflow:hidden; display:flex; align-items:center; justify-content:center;
+}
+.frame-glow {
+  position:absolute; inset:0;
+  background: radial-gradient(ellipse 80% 60% at 50% 30%, rgba(201,168,76,.08), transparent 70%);
+}
+.frame-monogram {
+  font-family: 'Playfair Display', serif;
+  font-size: 160px; font-style:italic;
+  color: rgba(201,168,76,.06);
+  position:absolute; user-select:none;
+  line-height:1;
+}
+.frame-content {
+  position:relative; z-index:2;
+  display:flex; flex-direction:column; align-items:center; gap:20px;
+}
+.frame-avatar {
+  width:100px; height:100px; border-radius:50%;
+  border: 1px solid rgba(201,168,76,.4);
+  display:flex; align-items:center; justify-content:center;
+  font-size:40px; color:rgba(201,168,76,.6);
+  background: rgba(201,168,76,.04);
+}
+.frame-name {
+  font-family:'Playfair Display',serif;
+  font-size:24px; font-style:italic;
+  color:rgba(245,241,232,.7); letter-spacing:.06em;
+}
+.frame-role {
+  font-size:10px; letter-spacing:.35em; text-transform:uppercase;
+  color:var(--gold); opacity:.7;
+}
+.frame-divider {
+  width:40px; height:1px; background:rgba(201,168,76,.3);
+}
+.frame-tags {
+  display:flex; flex-wrap:wrap; justify-content:center; gap:8px;
+  max-width:260px;
+}
+.ftag {
+  font-size:9px; letter-spacing:.2em; text-transform:uppercase;
+  border:1px solid rgba(201,168,76,.2); color:rgba(245,241,232,.35);
+  padding:4px 12px;
+}
+
+/* corner decorations */
+.frame-corner {
+  position:absolute; width:20px; height:20px;
+  border-color: var(--gold); border-style:solid; opacity:.5;
+}
+.fc-tl { top:0; left:0; border-width:1px 0 0 1px; }
+.fc-tr { top:0; right:0; border-width:1px 1px 0 0; }
+.fc-bl { bottom:0; left:0; border-width:0 0 1px 1px; }
+.fc-br { bottom:0; right:0; border-width:0 1px 1px 0; }
+
+/* floating stats */
+.stat-badge {
+  position:absolute;
+  background: rgba(15,15,15,.9);
+  border:1px solid var(--gold-dim);
+  backdrop-filter:blur(10px);
+  padding:16px 22px;
+}
+.stat-badge.s1 { left:-60px; top:20%; }
+.stat-badge.s2 { right:-50px; bottom:28%; }
+.stat-num { font-family:'Playfair Display',serif; font-size:32px; color:var(--gold); display:block; line-height:1; }
+.stat-lbl { font-size:9px; letter-spacing:.25em; text-transform:uppercase; color:var(--ash); margin-top:5px; display:block; }
+
+/* scroll indicator */
+.scroll-hint {
+  position:absolute; bottom:44px; left:64px;
+  display:flex; align-items:center; gap:16px;
+  font-size:10px; letter-spacing:.3em; text-transform:uppercase;
+  color:rgba(245,241,232,.3);
+  opacity:0; animation: riseIn .8s var(--ease) 1.4s forwards;
+}
+.scroll-line {
+  width:50px; height:1px;
+  background: linear-gradient(to right, var(--gold), transparent);
+  position:relative; overflow:hidden;
+}
+.scroll-line::after {
+  content:'';
+  position:absolute; top:0; left:-100%; width:100%; height:100%;
+  background:var(--gold);
+  animation: scrollSlide 2s ease 2s infinite;
+}
+@keyframes scrollSlide {
+  0%{left:-100%} 100%{left:100%}
+}
+
+/* ── MARQUEE ── */
+.marquee-wrap {
+  overflow:hidden;
+  border-top:1px solid var(--gold-dim);
+  border-bottom:1px solid var(--gold-dim);
+  padding:18px 0;
+  background:var(--black-soft);
+}
+.marquee-track {
+  display:flex; gap:0;
+  animation: marquee 22s linear infinite;
+  width: max-content;
+}
+.marquee-item {
+  display:flex; align-items:center; gap:40px;
+  padding:0 40px;
+  font-size:11px; letter-spacing:.35em; text-transform:uppercase;
+  color: rgba(201,168,76,.45); white-space:nowrap;
+}
+.marquee-dot { width:4px; height:4px; background:var(--gold); border-radius:50%; opacity:.4; }
+@keyframes marquee {
+  from{transform:translateX(0)} to{transform:translateX(-50%)}
+}
+
+/* ── SERVICES ── */
+#services {
+  padding: 140px 64px;
+  background: var(--black-soft);
+}
+.sec-header {
+  display:grid; grid-template-columns:1fr 1fr; gap:60px;
+  align-items:end; margin-bottom:80px;
+}
+.sec-eyebrow {
+  font-size:10px; letter-spacing:.45em; text-transform:uppercase;
+  color:var(--gold); display:flex; align-items:center; gap:14px;
+  margin-bottom:20px;
+}
+.sec-eyebrow::before { content:''; width:30px; height:1px; background:var(--gold); }
+.sec-title {
+  font-family:'Playfair Display',serif;
+  font-size:clamp(36px,4.5vw,54px); font-weight:400; line-height:1.12;
+}
+.sec-title em { font-style:italic; color:var(--gold); }
+.sec-note {
+  font-size:16px; font-weight:300; line-height:1.9;
+  color:rgba(245,241,232,.42); align-self:end;
+  font-family:'Noto Serif TC',serif;
+}
+
+.services-grid {
+  display:grid; grid-template-columns:repeat(4,1fr);
+  gap:1px; background:var(--gold-dim);
+}
+.svc-card {
+  background:var(--black-soft);
+  padding:48px 36px 40px;
+  position:relative; overflow:hidden;
+  transition:background .5s var(--ease);
+}
+.svc-card::after {
+  content:'';
+  position:absolute; top:0; left:0; right:0; height:2px;
+  background:var(--gold); transform:scaleX(0); transform-origin:left;
+  transition:transform .5s var(--ease);
+}
+.svc-card:hover { background:var(--black-mid); }
+.svc-card:hover::after { transform:scaleX(1); }
+
+.svc-num {
+  font-family:'Playfair Display',serif; font-size:52px;
+  color:rgba(201,168,76,.1); line-height:1;
+  margin-bottom:28px; transition:color .5s;
+}
+.svc-card:hover .svc-num { color:rgba(201,168,76,.25); }
+.svc-icon { font-size:26px; margin-bottom:18px; display:block; }
+.svc-name {
+  font-family:'Playfair Display',serif;
+  font-size:19px; font-weight:400; margin-bottom:14px; line-height:1.3;
+}
+.svc-desc {
+  font-size:13px; color:var(--ash); line-height:1.85;
+  margin-bottom:28px; font-family:'Noto Serif TC',serif; font-weight:300;
+}
+.svc-price {
+  font-size:12px; letter-spacing:.12em; color:var(--gold);
+  margin-bottom:20px; display:block;
+}
+.svc-tags { display:flex; flex-wrap:wrap; gap:6px; }
+.stag {
+  font-size:9px; letter-spacing:.15em; text-transform:uppercase;
+  border:1px solid rgba(201,168,76,.2); color:rgba(245,241,232,.3);
+  padding:3px 9px;
+}
+
+/* ── GALLERY PREVIEW ── */
+#gallery {
+  padding:140px 64px;
+  background:var(--black);
+}
+.gallery-top {
+  display:flex; justify-content:space-between; align-items:flex-end;
+  margin-bottom:60px;
+}
+.gallery-filters { display:flex; gap:8px; flex-wrap:wrap; }
+.flt {
+  background:none; border:1px solid rgba(201,168,76,.2);
+  color:var(--ash); padding:8px 20px;
+  font-family:'Cormorant Garamond',serif;
+  font-size:11px; letter-spacing:.22em; text-transform:uppercase;
+  cursor:none; transition:all .4s var(--ease);
+}
+.flt.on, .flt:hover { background:var(--gold); border-color:var(--gold); color:var(--black); }
+
+.gallery-grid {
+  display:grid;
+  grid-template-columns:repeat(12,1fr);
+  grid-auto-rows:minmax(180px,auto);
+  gap:12px;
+}
+.gi { position:relative; overflow:hidden; cursor:none; background:var(--charcoal); }
+.gi:nth-child(1){grid-column:span 7; grid-row:span 2;}
+.gi:nth-child(2){grid-column:span 5;}
+.gi:nth-child(3){grid-column:span 5;}
+.gi:nth-child(4){grid-column:span 4; grid-row:span 2;}
+.gi:nth-child(5){grid-column:span 4;}
+.gi:nth-child(6){grid-column:span 4;}
+
+.gi-bg {
+  position:absolute; inset:0;
+  transition:transform .8s var(--ease);
+}
+.gi:hover .gi-bg { transform:scale(1.07); }
+
+.bg1{background:linear-gradient(135deg,#12100a,#241f0e,#0e0d08);}
+.bg2{background:linear-gradient(135deg,#0d0e18,#151626,#090a12);}
+.bg3{background:linear-gradient(135deg,#150d0d,#251515,#100909);}
+.bg4{background:linear-gradient(135deg,#080e10,#10181c,#060c0f);}
+.bg5{background:linear-gradient(135deg,#131008,#201b0d,#0e0c07);}
+.bg6{background:linear-gradient(135deg,#0f0d14,#1a1820,#09090f);}
+
+.gi-deco {
+  position:absolute; inset:0;
+  display:flex; align-items:center; justify-content:center;
+}
+.gi-ring {
+  width:36%; aspect-ratio:1; border-radius:50%;
+  border:1px solid rgba(201,168,76,.15);
+  display:flex; align-items:center; justify-content:center;
+  position:relative;
+}
+.gi-ring::before {
+  content:''; position:absolute; inset:-18px;
+  border-radius:50%; border:1px solid rgba(201,168,76,.07);
+}
+.gi-icon { font-size:24px; opacity:.35; }
+
+.gi-overlay {
+  position:absolute; inset:0;
+  background:linear-gradient(to top, rgba(0,0,0,.88) 0%, transparent 55%);
+  opacity:0; transition:opacity .5s var(--ease);
+  display:flex; align-items:flex-end; padding:28px;
+}
+.gi:hover .gi-overlay { opacity:1; }
+.gi-info { transform:translateY(8px); transition:transform .5s var(--ease); }
+.gi:hover .gi-info { transform:translateY(0); }
+.gi-cat { font-size:9px; letter-spacing:.3em; text-transform:uppercase; color:var(--gold); margin-bottom:5px; }
+.gi-title { font-family:'Playfair Display',serif; font-size:17px; font-weight:400; color:var(--white); }
+
+.gallery-more { text-align:center; margin-top:60px; }
+
+/* ── ABOUT TEASER ── */
+#about {
+  padding:140px 64px;
+  background:var(--black-soft);
+  display:grid; grid-template-columns:1fr 1fr; gap:100px; align-items:center;
+}
+.about-visual { position:relative; height:560px; }
+.av-outer {
+  position:absolute; inset:0;
+  border:1px solid rgba(201,168,76,.16);
+}
+.av-inner {
+  position:absolute; inset:22px;
+  background:linear-gradient(145deg,#12100a,#1c1808,#0b0b0a);
+  display:flex; align-items:center; justify-content:center; overflow:hidden;
+}
+.av-mono {
+  font-family:'Playfair Display',serif;
+  font-size:180px; font-style:italic;
+  color:rgba(201,168,76,.05); position:absolute;
+  user-select:none; line-height:1;
+}
+.av-content {
+  position:relative; z-index:2;
+  display:flex; flex-direction:column; align-items:center; gap:18px;
+}
+.av-avatar {
+  width:110px; height:110px; border-radius:50%;
+  border:1px solid rgba(201,168,76,.35);
+  display:flex; align-items:center; justify-content:center;
+  font-size:44px; color:rgba(201,168,76,.5);
+  background:rgba(201,168,76,.03);
+}
+.av-name { font-family:'Playfair Display',serif; font-size:22px; font-style:italic; color:rgba(245,241,232,.65); }
+.av-role { font-size:9px; letter-spacing:.4em; text-transform:uppercase; color:var(--gold); opacity:.65; }
+.av-line { width:36px; height:1px; background:rgba(201,168,76,.25); }
+.av-badges { display:flex; flex-wrap:wrap; justify-content:center; gap:6px; max-width:240px; }
+.avb {
+  font-size:8px; letter-spacing:.18em; text-transform:uppercase;
+  border:1px solid rgba(201,168,76,.18); color:rgba(245,241,232,.3);
+  padding:3px 10px;
+}
+/* corner accents */
+.avc { position:absolute; width:18px; height:18px; border-color:var(--gold); border-style:solid; opacity:.4; }
+.avc.tl{top:0;left:0;border-width:1px 0 0 1px;}
+.avc.tr{top:0;right:0;border-width:1px 1px 0 0;}
+.avc.bl{bottom:0;left:0;border-width:0 0 1px 1px;}
+.avc.br{bottom:0;right:0;border-width:0 1px 1px 0;}
+
+/* floating badge */
+.av-badge-float {
+  position:absolute; right:-44px; top:22%;
+  background:rgba(12,12,12,.92); border:1px solid var(--gold-dim);
+  backdrop-filter:blur(10px); padding:14px 20px;
+}
+.avf-num { font-family:'Playfair Display',serif; font-size:30px; color:var(--gold); display:block; line-height:1; }
+.avf-lbl { font-size:9px; letter-spacing:.22em; text-transform:uppercase; color:var(--ash); margin-top:4px; display:block; }
+
+.about-text {}
+.about-lead {
+  font-family:'Playfair Display',serif;
+  font-size:clamp(34px,4vw,50px); font-weight:400; line-height:1.15;
+  margin-bottom:32px;
+}
+.about-lead em { font-style:italic; color:var(--gold); }
+.about-body {
+  font-size:16px; font-weight:300; line-height:1.95;
+  color:rgba(245,241,232,.5); margin-bottom:48px;
+  font-family:'Noto Serif TC',serif;
+}
+.about-vals { display:grid; grid-template-columns:1fr 1fr; gap:24px; margin-bottom:52px; }
+.val-item { border-left:1px solid var(--gold-dim); padding-left:16px; }
+.val-name { font-size:11px; letter-spacing:.2em; text-transform:uppercase; color:var(--gold); margin-bottom:6px; }
+.val-desc { font-size:13px; color:rgba(245,241,232,.38); line-height:1.6; font-family:'Noto Serif TC',serif; }
+
+/* ── CONTACT CTA ── */
+#contact-cta {
+  padding:120px 64px;
+  background:var(--black);
+  text-align:center;
+  position:relative; overflow:hidden;
+}
+#contact-cta::before {
+  content:'';
+  position:absolute;
+  width:800px; height:400px;
+  background:radial-gradient(ellipse, rgba(201,168,76,.05), transparent 70%);
+  top:50%; left:50%; transform:translate(-50%,-50%);
+}
+.cta-eyebrow {
+  font-size:10px; letter-spacing:.45em; text-transform:uppercase;
+  color:var(--gold); display:inline-flex; align-items:center; gap:14px;
+  margin-bottom:28px;
+}
+.cta-eyebrow::before,.cta-eyebrow::after { content:''; width:36px; height:1px; background:var(--gold); }
+.cta-title {
+  font-family:'Playfair Display',serif;
+  font-size:clamp(40px,6vw,76px); font-weight:400; line-height:1.1;
+  margin-bottom:24px; position:relative; z-index:1;
+}
+.cta-title em { font-style:italic; color:var(--gold); display:block; }
+.cta-sub {
+  font-size:17px; font-weight:300; color:rgba(245,241,232,.4);
+  margin-bottom:56px; font-family:'Noto Serif TC',serif;
+  max-width:480px; margin-left:auto; margin-right:auto; line-height:1.8;
+}
+.cta-buttons { display:flex; gap:20px; justify-content:center; align-items:center; position:relative; z-index:1; }
+
+/* ── FOOTER ── */
+footer {
+  padding:52px 64px;
+  border-top:1px solid var(--gold-dim);
+  display:flex; justify-content:space-between; align-items:center;
+  background:var(--black);
+}
+.ft-logo { font-family:'Playfair Display',serif; font-size:18px; letter-spacing:.14em; color:var(--gold); }
+.ft-logo em { font-style:italic; color:rgba(245,241,232,.5); font-size:16px; }
+.ft-copy { font-size:11px; letter-spacing:.12em; color:rgba(245,241,232,.22); }
+.ft-socials { display:flex; gap:20px; }
+.ft-s {
+  width:36px; height:36px; border:1px solid var(--gold-dim);
+  display:flex; align-items:center; justify-content:center;
+  font-size:14px; color:var(--ash); text-decoration:none;
+  transition:all .4s var(--ease);
+}
+.ft-s:hover { background:var(--gold); border-color:var(--gold); color:var(--black); }
+
+/* ── ANIMATIONS ── */
+@keyframes riseIn {
+  from{opacity:0;transform:translateY(28px);}
+  to{opacity:1;transform:translateY(0);}
+}
+.reveal {
+  opacity:0; transform:translateY(24px);
+  transition:opacity .8s var(--ease), transform .8s var(--ease);
+}
+.reveal.visible { opacity:1; transform:translateY(0); }
+
+/* ── MOBILE RWD ── */
+@media(max-width:768px){
+  nav{padding:18px 24px;}
+  .nav-links{display:none;}
+  .nav-cta{padding:8px 18px;font-size:10px;}
+
+  #hero{grid-template-columns:1fr;padding:100px 28px 60px;min-height:auto;}
+  .hero-rule{display:none;}
+  .hero-right{display:none;}
+  .hero-left{padding:0;}
+  h1{font-size:clamp(38px,11vw,56px);}
+  .hero-desc{font-size:15px;margin-bottom:40px;}
+  .hero-actions{flex-direction:column;align-items:flex-start;gap:16px;}
+  .btn-gold{width:100%;text-align:center;padding:16px;}
+  .hero-stats{display:none;}
+  .scroll-hint{display:none;}
+
+  .marquee-item{gap:20px;padding:0 20px;font-size:10px;}
+
+  #services{padding:72px 28px;}
+  .sec-header{grid-template-columns:1fr;gap:20px;margin-bottom:48px;}
+  .services-grid{grid-template-columns:1fr 1fr;}
+  .svc-card{padding:32px 22px;}
+  .svc-num{font-size:36px;margin-bottom:16px;}
+  .svc-name{font-size:16px;}
+  .svc-desc{font-size:12px;}
+
+  #gallery{padding:72px 28px;}
+  .gallery-top{flex-direction:column;gap:24px;align-items:flex-start;}
+  .gallery-grid{grid-template-columns:1fr 1fr;grid-auto-rows:auto;}
+  .gi:nth-child(1){grid-column:span 2;grid-row:span 1;}
+  .gi:nth-child(2),.gi:nth-child(3),.gi:nth-child(4),.gi:nth-child(5),.gi:nth-child(6){grid-column:span 1;grid-row:span 1;}
+  .gallery-filters{flex-wrap:wrap;gap:6px;}
+  .flt{padding:6px 14px;font-size:10px;}
+
+  #about{grid-template-columns:1fr;gap:40px;padding:72px 28px;}
+  .about-visual{height:340px;}
+  .av-badge-float{display:none;}
+  .about-lead{font-size:clamp(28px,8vw,40px);}
+  .about-body{font-size:14px;}
+  .about-vals{grid-template-columns:1fr;gap:16px;}
+  .btn-gold{display:block;text-align:center;}
+
+  #contact-cta{padding:72px 28px;}
+  .cta-title{font-size:clamp(32px,9vw,48px);}
+  .cta-sub{font-size:14px;margin-bottom:32px;}
+  .cta-buttons{flex-direction:column;align-items:center;gap:16px;}
+  .cta-buttons .btn-gold{width:100%;max-width:300px;text-align:center;}
+
+  footer{padding:36px 24px;flex-direction:column;gap:20px;text-align:center;}
+  .ft-socials{justify-content:center;}
+}
+@media(max-width:480px){
+  .services-grid{grid-template-columns:1fr;}
+  .gallery-grid{grid-template-columns:1fr;}
+  .gi:nth-child(1){grid-column:span 1;}
+}
+</style>
+</head>
+<body>
+
+<div id="cur"></div>
+<div id="cur-ring"></div>
+
+<!-- NAV -->
+<nav id="nav">
+  <a href="https://jiunhan1101.github.io/jiunhan-design/index.html" class="nav-logo">STUDIO <em>Aurum</em></a>
+  <ul class="nav-links">
+    <li><a href="https://jiunhan1101.github.io/jiunhan-design/services.html">服務項目</a></li>
+    <li><a href="https://jiunhan1101.github.io/jiunhan-design/gallery.html">作品集</a></li>
+    <li><a href="https://jiunhan1101.github.io/jiunhan-design/about.html">關於我</a></li>
+  </ul>
+  <a href="https://jiunhan1101.github.io/jiunhan-design/contact.html" class="nav-cta">開始合作</a>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-rule"></div>
+
+  <div class="hero-left">
+    <div class="hero-tag">Creative Design Studio</div>
+    <h1>
+      打造令人<br>
+      <em>難以忘懷</em><br>
+      的品牌視覺
+    </h1>
+    <p class="hero-desc">
+      專注於品牌設計、UI/UX、平面印刷與社群廣告，<br>
+      以奢華美學與精準策略，讓每個品牌都成為傳奇。
+    </p>
+    <div class="hero-actions">
+      <a href="https://jiunhan1101.github.io/jiunhan-design/gallery.html" class="btn-gold"><span>瀏覽作品集</span></a>
+      <a href="https://jiunhan1101.github.io/jiunhan-design/services.html" class="btn-outline-link">查看服務 <span class="arrow">→</span></a>
+    </div>
+  </div>
+
+  <div class="hero-right">
+    <div class="hero-frame">
+      <div class="frame-border">
+        <div class="fc-tl frame-corner"></div>
+        <div class="fc-tr frame-corner"></div>
+        <div class="fc-bl frame-corner"></div>
+        <div class="fc-br frame-corner"></div>
+      </div>
+      <div class="frame-inner">
+        <div class="frame-glow"></div>
+        <div class="frame-monogram">A</div>
+        <div class="frame-content">
+          <div class="frame-avatar">✦</div>
+          <div class="frame-name">Studio Aurum</div>
+          <div class="frame-role">Design Studio · Since 2018</div>
+          <div class="frame-divider"></div>
+          <div class="frame-tags">
+            <span class="ftag">Brand Identity</span>
+            <span class="ftag">UI / UX</span>
+            <span class="ftag">Print</span>
+            <span class="ftag">Social Ads</span>
+          </div>
+        </div>
+      </div>
+      <div class="stat-badge s1">
+        <span class="stat-num">120<span style="font-size:20px;color:var(--gold-light)">+</span></span>
+        <span class="stat-lbl">完成專案</span>
+      </div>
+      <div class="stat-badge s2">
+        <span class="stat-num">98<span style="font-size:16px;color:var(--gold-light)">%</span></span>
+        <span class="stat-lbl">顧客滿意度</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="scroll-hint">
+    <div class="scroll-line"></div>
+    Scroll to explore
+  </div>
+</section>
+
+<!-- MARQUEE -->
+<div class="marquee-wrap">
+  <div class="marquee-track">
+    <div class="marquee-item">Brand Identity <span class="marquee-dot"></span></div>
+    <div class="marquee-item">Logo Design <span class="marquee-dot"></span></div>
+    <div class="marquee-item">UI / UX Design <span class="marquee-dot"></span></div>
+    <div class="marquee-item">Print & Editorial <span class="marquee-dot"></span></div>
+    <div class="marquee-item">Social Advertising <span class="marquee-dot"></span></div>
+    <div class="marquee-item">Visual Strategy <span class="marquee-dot"></span></div>
+    <div class="marquee-item">Packaging Design <span class="marquee-dot"></span></div>
+    <div class="marquee-item">Motion Graphics <span class="marquee-dot"></span></div>
+    <!-- duplicate for seamless loop -->
+    <div class="marquee-item">Brand Identity <span class="marquee-dot"></span></div>
+    <div class="marquee-item">Logo Design <span class="marquee-dot"></span></div>
+    <div class="marquee-item">UI / UX Design <span class="marquee-dot"></span></div>
+    <div class="marquee-item">Print & Editorial <span class="marquee-dot"></span></div>
+    <div class="marquee-item">Social Advertising <span class="marquee-dot"></span></div>
+    <div class="marquee-item">Visual Strategy <span class="marquee-dot"></span></div>
+    <div class="marquee-item">Packaging Design <span class="marquee-dot"></span></div>
+    <div class="marquee-item">Motion Graphics <span class="marquee-dot"></span></div>
+  </div>
+</div>
+
+<!-- SERVICES -->
+<section id="services">
+  <div class="sec-header reveal">
+    <div>
+      <div class="sec-eyebrow">Services</div>
+      <h2 class="sec-title">我們提供的<br><em>專業服務</em></h2>
+    </div>
+    <p class="sec-note">每項服務都以精品級的工藝標準執行，確保品牌在市場上的獨特性與辨識度。</p>
+  </div>
+  <div class="services-grid reveal">
+    <div class="svc-card">
+      <div class="svc-num">01</div>
+      <span class="svc-icon">◈</span>
+      <div class="svc-name">品牌設計<br>/ LOGO</div>
+      <p class="svc-desc">從品牌策略出發，打造具有深度與記憶點的視覺識別系統，讓品牌在競爭中脫穎而出。</p>
+      <span class="svc-price">起始報價 NT$ 15,000</span>
+      <div class="svc-tags">
+        <span class="stag">Logo</span>
+        <span class="stag">VI System</span>
+        <span class="stag">Brand Guide</span>
+      </div>
+    </div>
+    <div class="svc-card">
+      <div class="svc-num">02</div>
+      <span class="svc-icon">◉</span>
+      <div class="svc-name">UI / UX<br>設計</div>
+      <p class="svc-desc">結合使用者研究與視覺美學，設計直覺且令人著迷的數位體驗，提升轉換率與品牌價值。</p>
+      <span class="svc-price">起始報價 NT$ 30,000</span>
+      <div class="svc-tags">
+        <span class="stag">Web Design</span>
+        <span class="stag">App UI</span>
+        <span class="stag">Prototype</span>
+      </div>
+    </div>
+    <div class="svc-card">
+      <div class="svc-num">03</div>
+      <span class="svc-icon">▣</span>
+      <div class="svc-name">平面設計<br>/ 印刷</div>
+      <p class="svc-desc">名片、型錄、包裝、海報——每一張印刷品都是品牌的實體延伸，值得最細膩的工藝對待。</p>
+      <span class="svc-price">起始報價 NT$ 5,000</span>
+      <div class="svc-tags">
+        <span class="stag">Brochure</span>
+        <span class="stag">Packaging</span>
+        <span class="stag">Poster</span>
+      </div>
+    </div>
+    <div class="svc-card">
+      <div class="svc-num">04</div>
+      <span class="svc-icon">◆</span>
+      <div class="svc-name">社群廣告<br>設計</div>
+      <p class="svc-desc">為 Instagram、Facebook、Google 打造高轉換率的視覺廣告素材，讓每一分預算都發揮最大效益。</p>
+      <span class="svc-price">起始報價 NT$ 8,000</span>
+      <div class="svc-tags">
+        <span class="stag">Instagram</span>
+        <span class="stag">Facebook</span>
+        <span class="stag">Google Ads</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY PREVIEW -->
+<section id="gallery">
+  <div class="gallery-top reveal">
+    <div>
+      <div class="sec-eyebrow">Portfolio</div>
+      <h2 class="sec-title">精選<em>作品集</em></h2>
+    </div>
+    <div class="gallery-filters">
+      <button class="flt on">全部</button>
+      <button class="flt">品牌設計</button>
+      <button class="flt">UI / UX</button>
+      <button class="flt">平面印刷</button>
+      <button class="flt">社群廣告</button>
+    </div>
+  </div>
+
+  <div class="gallery-grid reveal">
+    <div class="gi">
+      <div class="gi-bg bg1"></div>
+      <div class="gi-deco"><div class="gi-ring"><span class="gi-icon">◈</span></div></div>
+      <div class="gi-overlay">
+        <div class="gi-info">
+          <div class="gi-cat">品牌設計</div>
+          <div class="gi-title">Luxe Maison 品牌識別</div>
+        </div>
+      </div>
+    </div>
+    <div class="gi">
+      <div class="gi-bg bg2"></div>
+      <div class="gi-deco"><div class="gi-ring"><span class="gi-icon">◉</span></div></div>
+      <div class="gi-overlay">
+        <div class="gi-info">
+          <div class="gi-cat">UI / UX</div>
+          <div class="gi-title">Artisan App 介面設計</div>
+        </div>
+      </div>
+    </div>
+    <div class="gi">
+      <div class="gi-bg bg3"></div>
+      <div class="gi-deco"><div class="gi-ring"><span class="gi-icon">▣</span></div></div>
+      <div class="gi-overlay">
+        <div class="gi-info">
+          <div class="gi-cat">平面印刷</div>
+          <div class="gi-title">Noir 包裝設計</div>
+        </div>
+      </div>
+    </div>
+    <div class="gi">
+      <div class="gi-bg bg4"></div>
+      <div class="gi-deco"><div class="gi-ring"><span class="gi-icon">◆</span></div></div>
+      <div class="gi-overlay">
+        <div class="gi-info">
+          <div class="gi-cat">社群廣告</div>
+          <div class="gi-title">VELA 廣告系列</div>
+        </div>
+      </div>
+    </div>
+    <div class="gi">
+      <div class="gi-bg bg5"></div>
+      <div class="gi-deco"><div class="gi-ring"><span class="gi-icon">✦</span></div></div>
+      <div class="gi-overlay">
+        <div class="gi-info">
+          <div class="gi-cat">品牌設計</div>
+          <div class="gi-title">Essence LOGO 系統</div>
+        </div>
+      </div>
+    </div>
+    <div class="gi">
+      <div class="gi-bg bg6"></div>
+      <div class="gi-deco"><div class="gi-ring"><span class="gi-icon">◈</span></div></div>
+      <div class="gi-overlay">
+        <div class="gi-info">
+          <div class="gi-cat">UI / UX</div>
+          <div class="gi-title">Tempo 電商平台</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="gallery-more reveal">
+    <a href="https://jiunhan1101.github.io/jiunhan-design/gallery.html" class="btn-outline-link" style="justify-content:center;">
+      查看全部作品 <span class="arrow">→</span>
+    </a>
+  </div>
+</section>
+
+<!-- ABOUT TEASER -->
+<section id="about">
+  <div class="about-visual reveal">
+    <div class="av-outer">
+      <div class="avc tl"></div><div class="avc tr"></div>
+      <div class="avc bl"></div><div class="avc br"></div>
+    </div>
+    <div class="av-inner">
+      <div class="av-mono">A</div>
+      <div class="av-content">
+        <div class="av-avatar">✦</div>
+        <div class="av-name">Your Name</div>
+        <div class="av-role">Creative Director</div>
+        <div class="av-line"></div>
+        <div class="av-badges">
+          <span class="avb">Brand Strategy</span>
+          <span class="avb">Art Direction</span>
+          <span class="avb">Typography</span>
+          <span class="avb">Visual Identity</span>
+        </div>
+      </div>
+    </div>
+    <div class="av-badge-float">
+      <span class="avf-num">7<span style="font-size:16px">年</span></span>
+      <span class="avf-lbl">設計資歷</span>
+    </div>
+  </div>
+
+  <div class="about-text reveal">
+    <div class="sec-eyebrow">About</div>
+    <h2 class="about-lead">
+      用設計<em>說故事</em>，<br>讓品牌成為傳奇
+    </h2>
+    <p class="about-body">
+      我相信，真正偉大的設計不只是美麗——它能改變人們對品牌的感受，創造深刻的情感連結。
+      超過七年來，我專注於為高端品牌打造獨一無二的視覺語言，每一個細節都是對卓越的承諾。
+    </p>
+    <div class="about-vals">
+      <div class="val-item">
+        <div class="val-name">精準美學</div>
+        <div class="val-desc">每個像素都有其意義，每個選擇都有其理由。</div>
+      </div>
+      <div class="val-item">
+        <div class="val-name">策略思維</div>
+        <div class="val-desc">設計服務於品牌目標，美觀與效益缺一不可。</div>
+      </div>
+      <div class="val-item">
+        <div class="val-name">奢華工藝</div>
+        <div class="val-desc">精品級的製作標準，讓作品經得起時間考驗。</div>
+      </div>
+      <div class="val-item">
+        <div class="val-name">深度溝通</div>
+        <div class="val-desc">理解你的品牌靈魂，才能賦予它最完美的形體。</div>
+      </div>
+    </div>
+    <a href="https://jiunhan1101.github.io/jiunhan-design/contact.html" class="btn-gold"><span>與我合作</span></a>
+  </div>
+</section>
+
+<!-- CTA -->
+<section id="contact-cta">
+  <div class="cta-eyebrow reveal">Let's Create Together</div>
+  <h2 class="cta-title reveal">
+    準備好打造<br><em>你的品牌傳奇？</em>
+  </h2>
+  <p class="cta-sub reveal">告訴我你的品牌故事，讓我們一起將它化為令人屏息的視覺體驗。</p>
+  <div class="cta-buttons reveal">
+    <a href="/cdn-cgi/l/email-protection#99f1fcf5f5f6d9eaedecfdf0f6f8ecebecf4b7faf6f4" class="btn-gold"><span>立即聯絡</span></a>
+    <a href="https://jiunhan1101.github.io/jiunhan-design/gallery.html" class="btn-outline-link">再看看作品 <span class="arrow">→</span></a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="ft-logo">STUDIO <em>Aurum</em></div>
+  <div class="ft-copy">© 2025 Studio Aurum. All rights reserved.</div>
+  <div class="ft-socials">
+    <a href="#" class="ft-s">ig</a>
+    <a href="https://www.facebook.com/share/18s5e3B85C/" target="_blank" rel="noopener" class="ft-s">fb</a>
+    <a href="#" class="ft-s">be</a>
+    <a href="#" class="ft-s">li</a>
+  </div>
+</footer>
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+// Cursor
+const cur = document.getElementById('cur');
+const ring = document.getElementById('cur-ring');
+let mx=0,my=0,rx=0,ry=0;
+document.addEventListener('mousemove',e=>{
+  mx=e.clientX; my=e.clientY;
+  cur.style.left=mx+'px'; cur.style.top=my+'px';
+});
+function animRing(){
+  rx+=(mx-rx)*.12; ry+=(my-ry)*.12;
+  ring.style.left=rx+'px'; ring.style.top=ry+'px';
+  requestAnimationFrame(animRing);
+}
+animRing();
+
+// Nav scroll
+const nav=document.getElementById('nav');
+window.addEventListener('scroll',()=>{
+  nav.classList.toggle('scrolled',window.scrollY>60);
+});
+
+// Gallery filters
+document.querySelectorAll('.flt').forEach(btn=>{
+  btn.addEventListener('click',()=>{
+    document.querySelectorAll('.flt').forEach(b=>b.classList.remove('on'));
+    btn.classList.add('on');
+  });
+});
+
+// Scroll reveal
+const obs=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{
+    if(e.isIntersecting){
+      e.target.

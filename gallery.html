@@ -1,0 +1,921 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="瀏覽 Jiunhan 的品牌網站設計作品集，涵蓋品牌識別、UI/UX、平面印刷與社群廣告設計。">
+  <meta property="og:title" content="作品集 — Jiunhan Design">
+  <meta property="og:description" content="瀏覽 Jiunhan 的品牌網站設計作品集，涵蓋品牌識別、UI/UX、平面印刷與社群廣告設計。">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://jiunhan.github.io/jiunhan-design/og-image.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="作品集 — Jiunhan Design">
+  <meta name="twitter:description" content="瀏覽 Jiunhan 的品牌網站設計作品集，涵蓋品牌識別、UI/UX、平面印刷與社群廣告設計。">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%23080808'/><text y='.9em' font-size='80' x='10'>✦</text></svg>">
+<title>作品集 Gallery — Studio Aurum</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Noto+Serif+TC:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --gold: #C9A84C;
+  --gold-light: #E2C06A;
+  --gold-dim: rgba(201,168,76,0.18);
+  --gold-faint: rgba(201,168,76,0.07);
+  --black: #080808;
+  --black-soft: #0f0f0f;
+  --black-mid: #161616;
+  --charcoal: #1e1e1e;
+  --ash: #777;
+  --white: #F5F1E8;
+  --ease: cubic-bezier(0.23, 1, 0.32, 1);
+}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  background:var(--black);
+  color:var(--white);
+  font-family:'Cormorant Garamond',serif;
+  overflow-x:hidden;
+  cursor:none;
+}
+
+/* ── CURSOR ── */
+#cur{position:fixed;width:12px;height:12px;background:var(--gold);border-radius:50%;pointer-events:none;z-index:9999;transform:translate(-50%,-50%);box-shadow:0 0 8px rgba(201,168,76,.6);transition:transform .1s;}
+#cur-ring{position:fixed;width:34px;height:34px;border:1px solid rgba(201,168,76,.5);border-radius:50%;pointer-events:none;z-index:9998;transform:translate(-50%,-50%);transition:all .4s var(--ease);}
+body:has(a:hover) #cur-ring,body:has(button:hover) #cur-ring{transform:translate(-50%,-50%) scale(2.2);opacity:.25;}
+
+/* GRAIN */
+body::after{content:'';position:fixed;inset:0;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)' opacity='0.035'/%3E%3C/svg%3E");pointer-events:none;z-index:8000;opacity:.4;}
+
+/* ── NAV ── */
+nav{position:fixed;top:0;left:0;right:0;z-index:1000;padding:36px 64px;display:flex;align-items:center;justify-content:space-between;transition:all .6s var(--ease);background:rgba(8,8,8,.88);backdrop-filter:blur(24px);border-bottom:1px solid var(--gold-dim);}
+.nav-logo{font-family:'Playfair Display',serif;font-size:20px;letter-spacing:.16em;color:var(--gold);text-decoration:none;}
+.nav-logo em{font-style:italic;color:var(--white);font-size:18px;}
+.nav-links{display:flex;gap:44px;list-style:none;}
+.nav-links a{font-size:11px;letter-spacing:.25em;text-transform:uppercase;color:var(--ash);text-decoration:none;transition:color .4s;position:relative;}
+.nav-links a::after{content:'';position:absolute;bottom:-5px;left:0;right:0;height:1px;background:var(--gold);transform:scaleX(0);transform-origin:left;transition:transform .4s var(--ease);}
+.nav-links a:hover,.nav-links a.active{color:var(--gold);}
+.nav-links a:hover::after,.nav-links a.active::after{transform:scaleX(1);}
+.nav-cta{background:transparent;border:1px solid var(--gold-dim);color:var(--gold);padding:10px 28px;font-family:'Cormorant Garamond',serif;font-size:11px;letter-spacing:.25em;text-transform:uppercase;cursor:none;transition:all .4s var(--ease);text-decoration:none;}
+.nav-cta:hover{background:var(--gold);color:var(--black);}
+
+/* ── PAGE HERO ── */
+#page-hero{
+  padding: 160px 64px 100px;
+  position:relative;overflow:hidden;
+  border-bottom:1px solid var(--gold-dim);
+}
+#page-hero::before{
+  content:'';position:absolute;
+  width:600px;height:600px;
+  background:radial-gradient(circle,rgba(201,168,76,.06),transparent 70%);
+  top:-100px;right:10%;pointer-events:none;
+}
+.ph-breadcrumb{
+  display:flex;align-items:center;gap:10px;
+  font-size:10px;letter-spacing:.35em;text-transform:uppercase;
+  color:var(--ash);margin-bottom:36px;
+}
+.ph-breadcrumb a{color:var(--ash);text-decoration:none;transition:color .3s;}
+.ph-breadcrumb a:hover{color:var(--gold);}
+.ph-sep{color:var(--gold-dim);}
+.ph-breadcrumb span{color:var(--gold);}
+
+.ph-title{
+  font-family:'Playfair Display',serif;
+  font-size:clamp(52px,7vw,90px);font-weight:400;line-height:1.05;
+  margin-bottom:28px;
+}
+.ph-title em{font-style:italic;color:var(--gold);}
+
+.ph-row{display:flex;justify-content:space-between;align-items:flex-end;}
+.ph-desc{
+  font-size:17px;font-weight:300;color:rgba(245,241,232,.45);
+  line-height:1.9;max-width:500px;
+  font-family:'Noto Serif TC',serif;
+}
+.ph-counts{
+  display:flex;gap:48px;
+  opacity:0;animation:riseIn .9s var(--ease) .4s forwards;
+}
+.pc-item{text-align:right;}
+.pc-num{font-family:'Playfair Display',serif;font-size:40px;color:var(--gold);display:block;line-height:1;}
+.pc-lbl{font-size:9px;letter-spacing:.3em;text-transform:uppercase;color:var(--ash);margin-top:4px;display:block;}
+
+/* ── FILTER BAR ── */
+#filter-bar{
+  position:sticky;top:72px;z-index:100;
+  background:rgba(8,8,8,.95);backdrop-filter:blur(20px);
+  border-bottom:1px solid var(--gold-dim);
+  padding:20px 64px;
+  display:flex;align-items:center;justify-content:space-between;
+}
+.filters{display:flex;gap:6px;flex-wrap:wrap;}
+.flt{
+  background:none;border:1px solid rgba(201,168,76,.2);
+  color:var(--ash);padding:8px 20px;
+  font-family:'Cormorant Garamond',serif;
+  font-size:11px;letter-spacing:.22em;text-transform:uppercase;
+  cursor:none;transition:all .4s var(--ease);
+}
+.flt.on,.flt:hover{background:var(--gold);border-color:var(--gold);color:var(--black);}
+.view-toggle{display:flex;gap:6px;}
+.vtgl{
+  width:38px;height:38px;border:1px solid rgba(201,168,76,.2);
+  background:none;cursor:none;display:flex;align-items:center;justify-content:center;
+  color:var(--ash);font-size:14px;transition:all .4s var(--ease);
+}
+.vtgl.on,.vtgl:hover{border-color:var(--gold);color:var(--gold);}
+
+/* ── GALLERY MAIN ── */
+#gallery-main{padding:80px 64px 140px;}
+
+/* MASONRY GRID */
+.g-masonry{
+  columns:3;column-gap:16px;
+}
+.g-masonry.col2{columns:2;}
+.g-masonry.col1{columns:1;}
+
+.g-item{
+  break-inside:avoid;margin-bottom:16px;
+  position:relative;overflow:hidden;
+  cursor:none;background:var(--charcoal);
+  transition:transform .6s var(--ease);
+}
+.g-item:hover{transform:translateY(-4px);}
+
+.g-thumb{
+  position:relative;overflow:hidden;
+  width:100%;
+}
+.g-bg{
+  width:100%;display:block;
+  transition:transform .8s var(--ease);
+}
+.g-item:hover .g-bg{transform:scale(1.05);}
+
+/* placeholder visuals */
+.g-visual{
+  width:100%;
+  display:flex;align-items:center;justify-content:center;
+  position:relative;overflow:hidden;
+}
+.g-visual-inner{
+  position:absolute;inset:0;
+  display:flex;align-items:center;justify-content:center;
+}
+.g-ring{
+  border:1px solid rgba(201,168,76,.18);border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  position:relative;
+}
+.g-ring::before{content:'';position:absolute;border-radius:50%;border:1px solid rgba(201,168,76,.08);}
+.g-icon-big{color:rgba(201,168,76,.3);position:relative;z-index:1;}
+
+/* colour palettes per project */
+.pal1{background:linear-gradient(145deg,#131005,#221c08,#0d0c07);}
+.pal2{background:linear-gradient(145deg,#0d0e1a,#151828,#090b14);}
+.pal3{background:linear-gradient(145deg,#14090a,#221012,#0e0808);}
+.pal4{background:linear-gradient(145deg,#080f12,#0f1820,#060c10);}
+.pal5{background:linear-gradient(145deg,#121008,#1e1a0c,#0c0b07);}
+.pal6{background:linear-gradient(145deg,#0f0d16,#191622,#090810);}
+.pal7{background:linear-gradient(145deg,#0c1209,#131e10,#090e08);}
+.pal8{background:linear-gradient(145deg,#14100a,#231c0e,#0e0c08);}
+.pal9{background:linear-gradient(145deg,#100914,#1c1020,#0a080f);}
+.pal10{background:linear-gradient(145deg,#0a1210,#10201c,#080e0d);}
+.pal11{background:linear-gradient(145deg,#161008,#28200e,#100e07);}
+.pal12{background:linear-gradient(145deg,#0e0e18,#181826,#090910);}
+
+/* overlay */
+.g-overlay{
+  position:absolute;inset:0;
+  background:linear-gradient(to top,rgba(0,0,0,.92) 0%,rgba(0,0,0,.3) 45%,transparent 70%);
+  opacity:0;transition:opacity .5s var(--ease);
+  display:flex;flex-direction:column;justify-content:flex-end;padding:28px;
+}
+.g-item:hover .g-overlay{opacity:1;}
+
+.g-meta-top{
+  position:absolute;top:20px;right:20px;
+  display:flex;gap:8px;
+  transform:translateY(-6px);transition:transform .5s var(--ease);opacity:0;
+}
+.g-item:hover .g-meta-top{transform:translateY(0);opacity:1;}
+.g-badge{
+  background:rgba(8,8,8,.85);backdrop-filter:blur(8px);
+  border:1px solid var(--gold-dim);
+  font-size:8px;letter-spacing:.2em;text-transform:uppercase;
+  color:var(--gold);padding:4px 10px;
+}
+
+.g-info{transform:translateY(10px);transition:transform .5s var(--ease);}
+.g-item:hover .g-info{transform:translateY(0);}
+.g-cat{font-size:9px;letter-spacing:.3em;text-transform:uppercase;color:var(--gold);margin-bottom:6px;}
+.g-title{font-family:'Playfair Display',serif;font-size:19px;font-weight:400;color:var(--white);margin-bottom:8px;line-height:1.25;}
+.g-client{font-size:11px;color:rgba(245,241,232,.4);letter-spacing:.1em;}
+
+/* bottom card info (always visible) */
+.g-card-info{
+  background:var(--black-soft);
+  padding:20px 22px;
+  border-top:1px solid rgba(201,168,76,.1);
+  display:flex;align-items:center;justify-content:space-between;
+}
+.gci-left{}
+.gci-name{font-family:'Playfair Display',serif;font-size:15px;font-weight:400;color:var(--white);margin-bottom:3px;}
+.gci-sub{font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--ash);}
+.gci-arrow{
+  width:32px;height:32px;border:1px solid var(--gold-dim);
+  display:flex;align-items:center;justify-content:center;
+  color:var(--ash);font-size:14px;
+  transition:all .4s var(--ease);
+}
+.g-item:hover .gci-arrow{background:var(--gold);border-color:var(--gold);color:var(--black);}
+
+/* featured tag */
+.g-featured{
+  position:absolute;top:20px;left:20px;
+  background:var(--gold);color:var(--black);
+  font-size:8px;letter-spacing:.25em;text-transform:uppercase;
+  padding:4px 10px;z-index:2;
+}
+
+/* ── LIGHTBOX ── */
+#lightbox{
+  position:fixed;inset:0;z-index:5000;
+  background:rgba(0,0,0,.96);backdrop-filter:blur(20px);
+  display:flex;align-items:center;justify-content:center;
+  opacity:0;pointer-events:none;
+  transition:opacity .5s var(--ease);
+}
+#lightbox.open{opacity:1;pointer-events:all;}
+.lb-inner{
+  position:relative;max-width:960px;width:90%;
+  display:grid;grid-template-columns:1fr 380px;gap:0;
+  border:1px solid var(--gold-dim);
+}
+.lb-visual{
+  position:relative;overflow:hidden;
+  min-height:520px;display:flex;align-items:center;justify-content:center;
+}
+.lb-bg{position:absolute;inset:0;}
+.lb-deco{position:relative;z-index:1;text-align:center;}
+.lb-deco-ring{
+  width:120px;height:120px;border-radius:50%;
+  border:1px solid rgba(201,168,76,.3);
+  display:flex;align-items:center;justify-content:center;
+  margin:0 auto 16px;font-size:40px;color:rgba(201,168,76,.5);
+}
+.lb-deco-label{font-size:10px;letter-spacing:.3em;text-transform:uppercase;color:rgba(201,168,76,.4);}
+.lb-info{
+  background:var(--black-soft);
+  padding:52px 44px;
+  display:flex;flex-direction:column;justify-content:space-between;
+  border-left:1px solid var(--gold-dim);
+}
+.lb-eyebrow{font-size:9px;letter-spacing:.4em;text-transform:uppercase;color:var(--gold);margin-bottom:20px;display:flex;align-items:center;gap:10px;}
+.lb-eyebrow::before{content:'';width:24px;height:1px;background:var(--gold);}
+.lb-title{font-family:'Playfair Display',serif;font-size:28px;font-weight:400;line-height:1.2;margin-bottom:16px;}
+.lb-client{font-size:12px;letter-spacing:.12em;color:var(--ash);margin-bottom:28px;}
+.lb-divider{width:40px;height:1px;background:var(--gold-dim);margin-bottom:28px;}
+.lb-desc{font-size:14px;font-weight:300;color:rgba(245,241,232,.5);line-height:1.9;margin-bottom:32px;font-family:'Noto Serif TC',serif;}
+.lb-tags{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:40px;}
+.lb-tag{font-size:9px;letter-spacing:.18em;text-transform:uppercase;border:1px solid rgba(201,168,76,.2);color:rgba(245,241,232,.35);padding:4px 10px;}
+.lb-actions{display:flex;gap:12px;}
+.lb-btn{background:var(--gold);color:var(--black);padding:12px 28px;font-family:'Cormorant Garamond',serif;font-size:11px;letter-spacing:.22em;text-transform:uppercase;text-decoration:none;display:inline-block;transition:all .4s var(--ease);cursor:none;border:none;}
+.lb-btn:hover{background:var(--gold-light);}
+.lb-close{
+  position:absolute;top:20px;right:20px;
+  width:40px;height:40px;border:1px solid var(--gold-dim);
+  background:none;color:var(--ash);font-size:18px;
+  cursor:none;transition:all .4s var(--ease);
+  display:flex;align-items:center;justify-content:center;
+  z-index:10;
+}
+.lb-close:hover{background:var(--gold);border-color:var(--gold);color:var(--black);}
+.lb-nav{
+  position:absolute;top:50%;transform:translateY(-50%);
+  width:44px;height:44px;border:1px solid var(--gold-dim);
+  background:rgba(8,8,8,.8);color:var(--ash);font-size:18px;
+  cursor:none;transition:all .4s var(--ease);
+  display:flex;align-items:center;justify-content:center;
+}
+.lb-nav:hover{background:var(--gold);border-color:var(--gold);color:var(--black);}
+.lb-prev{left:-22px;}
+.lb-next{right:-22px;}
+
+/* ── LOAD MORE ── */
+#load-more-wrap{text-align:center;padding:0 0 80px;}
+.load-more-btn{
+  background:none;border:1px solid var(--gold-dim);
+  color:var(--gold);padding:16px 52px;
+  font-family:'Cormorant Garamond',serif;
+  font-size:12px;letter-spacing:.25em;text-transform:uppercase;
+  cursor:none;transition:all .5s var(--ease);position:relative;overflow:hidden;
+}
+.load-more-btn::before{content:'';position:absolute;inset:0;background:var(--gold);transform:translateX(-101%);transition:transform .5s var(--ease);}
+.load-more-btn:hover::before{transform:translateX(0);}
+.load-more-btn span{position:relative;z-index:1;}
+.load-more-btn:hover span{color:var(--black);}
+
+/* ── FOOTER ── */
+footer{padding:52px 64px;border-top:1px solid var(--gold-dim);display:flex;justify-content:space-between;align-items:center;background:var(--black);}
+.ft-logo{font-family:'Playfair Display',serif;font-size:18px;letter-spacing:.14em;color:var(--gold);}
+.ft-logo em{font-style:italic;color:rgba(245,241,232,.5);font-size:16px;}
+.ft-copy{font-size:11px;letter-spacing:.12em;color:rgba(245,241,232,.22);}
+.ft-socials{display:flex;gap:20px;}
+.ft-s{width:36px;height:36px;border:1px solid var(--gold-dim);display:flex;align-items:center;justify-content:center;font-size:14px;color:var(--ash);text-decoration:none;transition:all .4s var(--ease);}
+.ft-s:hover{background:var(--gold);border-color:var(--gold);color:var(--black);}
+
+/* ── ANIMATIONS ── */
+@keyframes riseIn{from{opacity:0;transform:translateY(28px);}to{opacity:1;transform:translateY(0);}}
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .8s var(--ease),transform .8s var(--ease);}
+.reveal.visible{opacity:1;transform:translateY(0);}
+.reveal-d1{transition-delay:.1s;}
+.reveal-d2{transition-delay:.2s;}
+.reveal-d3{transition-delay:.3s;}
+
+/* ── RESPONSIVE ── */
+@media(max-width:900px){
+  nav{padding:18px 28px;}
+  #page-hero,#gallery-main,#filter-bar{padding-left:28px;padding-right:28px;}
+  .g-masonry{columns:2;}
+  .lb-inner{grid-template-columns:1fr;}
+  .lb-visual{min-height:280px;}
+  .ph-row{flex-direction:column;gap:24px;align-items:flex-start;}
+  .ph-counts{flex-direction:row;gap:32px;}
+}
+@media(max-width:768px){
+  nav{padding:18px 24px;}
+  .nav-links{display:none;}
+  .nav-cta{padding:8px 18px;font-size:10px;}
+
+  #page-hero{padding:110px 24px 56px;}
+  .ph-title{font-size:clamp(36px,10vw,52px);}
+  .ph-counts{gap:20px;}
+  .pc-num{font-size:30px;}
+
+  #filter-bar{padding:14px 24px;flex-direction:column;gap:14px;align-items:flex-start;top:64px;}
+  .filters{gap:5px;}
+  .flt{padding:7px 14px;font-size:10px;}
+  .view-toggle{display:none;}
+
+  #gallery-main{padding:60px 24px 80px;}
+  .g-masonry{columns:1;}
+
+  .g-card-info{padding:14px 16px;}
+  .gci-name{font-size:14px;}
+
+  /* Lightbox full screen on mobile */
+  #lightbox{align-items:flex-end;}
+  .lb-inner{width:100%;max-width:100%;grid-template-columns:1fr;border-left:none;border-right:none;border-bottom:none;max-height:90vh;overflow-y:auto;}
+  .lb-visual{display:none;}
+  .lb-info{padding:36px 28px;}
+  .lb-title{font-size:22px;}
+  .lb-prev,.lb-next{display:none;}
+  .lb-close{top:16px;right:16px;}
+
+  #load-more-wrap{padding:0 24px 60px;}
+  .load-more-btn{width:100%;}
+
+  footer{padding:36px 24px;flex-direction:column;gap:20px;text-align:center;}
+  .ft-socials{justify-content:center;}
+}
+@media(max-width:480px){
+  .ph-counts{gap:16px;}
+  .pc-num{font-size:26px;}
+}
+</style>
+</head>
+<body>
+
+<div id="cur"></div>
+<div id="cur-ring"></div>
+
+<!-- NAV -->
+<nav>
+  <a href="https://jiunhan1101.github.io/jiunhan-design/index.html" class="nav-logo">STUDIO <em>Aurum</em></a>
+  <ul class="nav-links">
+    <li><a href="#">服務項目</a></li>
+    <li><a href="#" class="active">作品集</a></li>
+    <li><a href="#">關於我</a></li>
+  </ul>
+  <a href="https://jiunhan1101.github.io/jiunhan-design/contact.html" class="nav-cta">開始合作</a>
+</nav>
+
+<!-- PAGE HERO -->
+<section id="page-hero">
+  <div class="ph-breadcrumb">
+    <a href="#">首頁</a>
+    <span class="ph-sep">／</span>
+    <span>作品集</span>
+  </div>
+  <h1 class="ph-title" style="opacity:0;animation:riseIn 1s var(--ease) .1s forwards;">
+    精選<em>作品集</em>
+  </h1>
+  <div class="ph-row">
+    <p class="ph-desc" style="opacity:0;animation:riseIn 1s var(--ease) .25s forwards;">
+      每一件作品都是品牌故事的視覺體現，<br>從策略出發，以美學收尾。
+    </p>
+    <div class="ph-counts">
+      <div class="pc-item"><span class="pc-num">48</span><span class="pc-lbl">精選作品</span></div>
+      <div class="pc-item"><span class="pc-num">4</span><span class="pc-lbl">設計領域</span></div>
+      <div class="pc-item"><span class="pc-num">36</span><span class="pc-lbl">合作品牌</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- FILTER BAR -->
+<div id="filter-bar">
+  <div class="filters">
+    <button class="flt on" data-cat="all">全部作品</button>
+    <button class="flt" data-cat="brand">品牌設計</button>
+    <button class="flt" data-cat="uiux">UI / UX</button>
+    <button class="flt" data-cat="print">平面印刷</button>
+    <button class="flt" data-cat="social">社群廣告</button>
+  </div>
+  <div class="view-toggle">
+    <button class="vtgl on" data-col="3" title="三欄">⊞</button>
+    <button class="vtgl" data-col="2" title="雙欄">▤</button>
+    <button class="vtgl" data-col="1" title="單欄">▬</button>
+  </div>
+</div>
+
+<!-- GALLERY MAIN -->
+<section id="gallery-main">
+  <div class="g-masonry" id="masonry">
+
+    <!-- 01 Featured -->
+    <div class="g-item reveal" data-cat="brand" data-id="1">
+      <div class="g-featured">精選</div>
+      <div class="g-thumb">
+        <div class="g-visual pal1" style="aspect-ratio:4/3;">
+          <div class="g-visual-inner">
+            <div class="g-ring" style="width:38%;aspect-ratio:1;">
+              <div class="g-ring" style="width:65%;aspect-ratio:1;" ></div>
+              <span class="g-icon-big" style="font-size:28px;position:absolute;">◈</span>
+            </div>
+          </div>
+        </div>
+        <div class="g-overlay">
+          <div class="g-meta-top"><span class="g-badge">2024</span><span class="g-badge">品牌設計</span></div>
+          <div class="g-info">
+            <div class="g-cat">Brand Identity</div>
+            <div class="g-title">Luxe Maison 品牌識別系統</div>
+            <div class="g-client">Client — Luxe Maison Taipei</div>
+          </div>
+        </div>
+      </div>
+      <div class="g-card-info">
+        <div class="gci-left"><div class="gci-name">Luxe Maison</div><div class="gci-sub">品牌設計 · 2024</div></div>
+        <div class="gci-arrow">→</div>
+      </div>
+    </div>
+
+    <!-- 02 -->
+    <div class="g-item reveal reveal-d1" data-cat="uiux" data-id="2">
+      <div class="g-thumb">
+        <div class="g-visual pal2" style="aspect-ratio:3/4;">
+          <div class="g-visual-inner">
+            <div style="display:flex;flex-direction:column;align-items:center;gap:12px;">
+              <div style="width:60px;height:60px;border:1px solid rgba(201,168,76,.25);border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:22px;color:rgba(201,168,76,.4);">◉</div>
+              <div style="width:80%;height:4px;background:rgba(201,168,76,.1);border-radius:2px;"></div>
+              <div style="width:60%;height:4px;background:rgba(201,168,76,.07);border-radius:2px;"></div>
+            </div>
+          </div>
+        </div>
+        <div class="g-overlay">
+          <div class="g-meta-top"><span class="g-badge">2024</span><span class="g-badge">UI/UX</span></div>
+          <div class="g-info">
+            <div class="g-cat">UI / UX Design</div>
+            <div class="g-title">Artisan App 介面設計</div>
+            <div class="g-client">Client — Artisan Co.</div>
+          </div>
+        </div>
+      </div>
+      <div class="g-card-info">
+        <div class="gci-left"><div class="gci-name">Artisan App</div><div class="gci-sub">UI/UX · 2024</div></div>
+        <div class="gci-arrow">→</div>
+      </div>
+    </div>
+
+    <!-- 03 -->
+    <div class="g-item reveal reveal-d2" data-cat="print" data-id="3">
+      <div class="g-thumb">
+        <div class="g-visual pal3" style="aspect-ratio:4/3;">
+          <div class="g-visual-inner">
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;padding:20%;">
+              <div style="aspect-ratio:1;border:1px solid rgba(201,168,76,.2);display:flex;align-items:center;justify-content:center;font-size:16px;color:rgba(201,168,76,.3);">▣</div>
+              <div style="aspect-ratio:1;background:rgba(201,168,76,.06);"></div>
+              <div style="aspect-ratio:1;background:rgba(201,168,76,.04);"></div>
+              <div style="aspect-ratio:1;border:1px solid rgba(201,168,76,.15);"></div>
+            </div>
+          </div>
+        </div>
+        <div class="g-overlay">
+          <div class="g-meta-top"><span class="g-badge">2023</span><span class="g-badge">平面印刷</span></div>
+          <div class="g-info">
+            <div class="g-cat">Print Design</div>
+            <div class="g-title">Noir 系列包裝設計</div>
+            <div class="g-client">Client — Noir Cosmetics</div>
+          </div>
+        </div>
+      </div>
+      <div class="g-card-info">
+        <div class="gci-left"><div class="gci-name">Noir Cosmetics</div><div class="gci-sub">平面印刷 · 2023</div></div>
+        <div class="gci-arrow">→</div>
+      </div>
+    </div>
+
+    <!-- 04 -->
+    <div class="g-item reveal reveal-d3" data-cat="social" data-id="4">
+      <div class="g-thumb">
+        <div class="g-visual pal4" style="aspect-ratio:1;">
+          <div class="g-visual-inner">
+            <div style="text-align:center;">
+              <div style="font-size:32px;color:rgba(201,168,76,.3);margin-bottom:10px;">◆</div>
+              <div style="width:60px;height:1px;background:rgba(201,168,76,.2);margin:0 auto 10px;"></div>
+              <div style="font-size:9px;letter-spacing:.3em;text-transform:uppercase;color:rgba(201,168,76,.25);">Social Ads</div>
+            </div>
+          </div>
+        </div>
+        <div class="g-overlay">
+          <div class="g-meta-top"><span class="g-badge">2024</span><span class="g-badge">社群廣告</span></div>
+          <div class="g-info">
+            <div class="g-cat">Social Advertising</div>
+            <div class="g-title">VELA 社群廣告系列</div>
+            <div class="g-client">Client — VELA Beauty</div>
+          </div>
+        </div>
+      </div>
+      <div class="g-card-info">
+        <div class="gci-left"><div class="gci-name">VELA Beauty</div><div class="gci-sub">社群廣告 · 2024</div></div>
+        <div class="gci-arrow">→</div>
+      </div>
+    </div>
+
+    <!-- 05 Featured -->
+    <div class="g-item reveal" data-cat="brand" data-id="5">
+      <div class="g-featured">精選</div>
+      <div class="g-thumb">
+        <div class="g-visual pal5" style="aspect-ratio:3/4;">
+          <div class="g-visual-inner">
+            <div style="text-align:center;">
+              <div style="font-family:'Playfair Display',serif;font-size:80px;font-style:italic;color:rgba(201,168,76,.15);line-height:1;">E</div>
+              <div style="width:40px;height:1px;background:rgba(201,168,76,.2);margin:8px auto;"></div>
+              <div style="font-size:8px;letter-spacing:.4em;text-transform:uppercase;color:rgba(201,168,76,.25);">Essence</div>
+            </div>
+          </div>
+        </div>
+        <div class="g-overlay">
+          <div class="g-meta-top"><span class="g-badge">2024</span><span class="g-badge">LOGO</span></div>
+          <div class="g-info">
+            <div class="g-cat">Logo Design</div>
+            <div class="g-title">Essence LOGO 完整系統</div>
+            <div class="g-client">Client — Essence Studio</div>
+          </div>
+        </div>
+      </div>
+      <div class="g-card-info">
+        <div class="gci-left"><div class="gci-name">Essence Studio</div><div class="gci-sub">品牌設計 · 2024</div></div>
+        <div class="gci-arrow">→</div>
+      </div>
+    </div>
+
+    <!-- 06 -->
+    <div class="g-item reveal reveal-d1" data-cat="uiux" data-id="6">
+      <div class="g-thumb">
+        <div class="g-visual pal6" style="aspect-ratio:4/3;">
+          <div class="g-visual-inner">
+            <div style="width:55%;display:flex;flex-direction:column;gap:8px;">
+              <div style="height:8px;background:rgba(201,168,76,.15);border-radius:2px;"></div>
+              <div style="height:8px;background:rgba(201,168,76,.09);border-radius:2px;width:75%;"></div>
+              <div style="height:8px;background:rgba(201,168,76,.06);border-radius:2px;width:55%;"></div>
+              <div style="height:28px;background:rgba(201,168,76,.12);border-radius:4px;margin-top:8px;width:50%;"></div>
+            </div>
+          </div>
+        </div>
+        <div class="g-overlay">
+          <div class="g-meta-top"><span class="g-badge">2023</span><span class="g-badge">UI/UX</span></div>
+          <div class="g-info">
+            <div class="g-cat">UI / UX Design</div>
+            <div class="g-title">Tempo 電商平台介面</div>
+            <div class="g-client">Client — Tempo Commerce</div>
+          </div>
+        </div>
+      </div>
+      <div class="g-card-info">
+        <div class="gci-left"><div class="gci-name">Tempo Commerce</div><div class="gci-sub">UI/UX · 2023</div></div>
+        <div class="gci-arrow">→</div>
+      </div>
+    </div>
+
+    <!-- 07 -->
+    <div class="g-item reveal reveal-d2" data-cat="print" data-id="7">
+      <div class="g-thumb">
+        <div class="g-visual pal7" style="aspect-ratio:3/2;">
+          <div class="g-visual-inner">
+            <div style="display:flex;gap:12px;align-items:center;">
+              <div style="width:40px;height:60px;border:1px solid rgba(201,168,76,.2);"></div>
+              <div style="width:40px;height:60px;border:1px solid rgba(201,168,76,.12);"></div>
+              <div style="width:40px;height:60px;background:rgba(201,168,76,.06);"></div>
+            </div>
+          </div>
+        </div>
+        <div class="g-overlay">
+          <div class="g-meta-top"><span class="g-badge">2023</span><span class="g-badge">名片</span></div>
+          <div class="g-info">
+            <div class="g-cat">Print Design</div>
+            <div class="g-title">Maré 名片與文具設計</div>
+            <div class="g-client">Client — Maré Agency</div>
+          </div>
+        </div>
+      </div>
+      <div class="g-card-info">
+        <div class="gci-left"><div class="gci-name">Maré Agency</div><div class="gci-sub">平面印刷 · 2023</div></div>
+        <div class="gci-arrow">→</div>
+      </div>
+    </div>
+
+    <!-- 08 -->
+    <div class="g-item reveal reveal-d3" data-cat="social" data-id="8">
+      <div class="g-thumb">
+        <div class="g-visual pal8" style="aspect-ratio:4/5;">
+          <div class="g-visual-inner">
+            <div style="text-align:center;padding:10%;">
+              <div style="width:70px;height:70px;border-radius:50%;border:1px solid rgba(201,168,76,.25);display:flex;align-items:center;justify-content:center;font-size:24px;color:rgba(201,168,76,.35);margin:0 auto 14px;">✦</div>
+              <div style="height:6px;background:rgba(201,168,76,.12);border-radius:2px;margin-bottom:6px;"></div>
+              <div style="height:6px;background:rgba(201,168,76,.07);border-radius:2px;width:70%;margin:0 auto;"></div>
+            </div>
+          </div>
+        </div>
+        <div class="g-overlay">
+          <div class="g-meta-top"><span class="g-badge">2024</span><span class="g-badge">IG廣告</span></div>
+          <div class="g-info">
+            <div class="g-cat">Social Advertising</div>
+            <div class="g-title">Céleste IG 廣告素材</div>
+            <div class="g-client">Client — Céleste Jewellery</div>
+          </div>
+        </div>
+      </div>
+      <div class="g-card-info">
+        <div class="gci-left"><div class="gci-name">Céleste Jewellery</div><div class="gci-sub">社群廣告 · 2024</div></div>
+        <div class="gci-arrow">→</div>
+      </div>
+    </div>
+
+    <!-- 09 -->
+    <div class="g-item reveal" data-cat="brand" data-id="9">
+      <div class="g-thumb">
+        <div class="g-visual pal9" style="aspect-ratio:1;">
+          <div class="g-visual-inner">
+            <div style="text-align:center;">
+              <div style="font-family:'Playfair Display',serif;font-size:60px;font-style:italic;color:rgba(201,168,76,.12);line-height:1;">M</div>
+              <div style="font-size:7px;letter-spacing:.5em;text-transform:uppercase;color:rgba(201,168,76,.2);">Minimal</div>
+            </div>
+          </div>
+        </div>
+        <div class="g-overlay">
+          <div class="g-meta-top"><span class="g-badge">2023</span><span class="g-badge">品牌設計</span></div>
+          <div class="g-info">
+            <div class="g-cat">Brand Identity</div>
+            <div class="g-title">Minimal Studio 視覺識別</div>
+            <div class="g-client">Client — Minimal Studio</div>
+          </div>
+        </div>
+      </div>
+      <div class="g-card-info">
+        <div class="gci-left"><div class="gci-name">Minimal Studio</div><div class="gci-sub">品牌設計 · 2023</div></div>
+        <div class="gci-arrow">→</div>
+      </div>
+    </div>
+
+    <!-- 10 -->
+    <div class="g-item reveal reveal-d1" data-cat="uiux" data-id="10">
+      <div class="g-thumb">
+        <div class="g-visual pal10" style="aspect-ratio:4/3;">
+          <div class="g-visual-inner">
+            <div style="width:60%;display:grid;grid-template-columns:1fr 1fr;gap:8px;">
+              <div style="aspect-ratio:1;border:1px solid rgba(201,168,76,.18);display:flex;align-items:center;justify-content:center;font-size:14px;color:rgba(201,168,76,.3);">◉</div>
+              <div style="aspect-ratio:1;background:rgba(201,168,76,.07);"></div>
+              <div style="grid-column:span 2;height:8px;background:rgba(201,168,76,.1);border-radius:2px;"></div>
+            </div>
+          </div>
+        </div>
+        <div class="g-overlay">
+          <div class="g-meta-top"><span class="g-badge">2023</span><span class="g-badge">Web Design</span></div>
+          <div class="g-info">
+            <div class="g-cat">UI / UX Design</div>
+            <div class="g-title">Foresta 品牌網站設計</div>
+            <div class="g-client">Client — Foresta Organic</div>
+          </div>
+        </div>
+      </div>
+      <div class="g-card-info">
+        <div class="gci-left"><div class="gci-name">Foresta Organic</div><div class="gci-sub">UI/UX · 2023</div></div>
+        <div class="gci-arrow">→</div>
+      </div>
+    </div>
+
+    <!-- 11 -->
+    <div class="g-item reveal reveal-d2" data-cat="print" data-id="11">
+      <div class="g-thumb">
+        <div class="g-visual pal11" style="aspect-ratio:2/3;">
+          <div class="g-visual-inner">
+            <div style="display:flex;flex-direction:column;align-items:center;gap:8px;width:50%;">
+              <div style="width:100%;height:2px;background:rgba(201,168,76,.2);"></div>
+              <div style="font-size:10px;letter-spacing:.3em;text-transform:uppercase;color:rgba(201,168,76,.2);">Catalogue</div>
+              <div style="width:70%;height:1px;background:rgba(201,168,76,.12);"></div>
+            </div>
+          </div>
+        </div>
+        <div class="g-overlay">
+          <div class="g-meta-top"><span class="g-badge">2024</span><span class="g-badge">型錄</span></div>
+          <div class="g-info">
+            <div class="g-cat">Editorial Design</div>
+            <div class="g-title">Auric 精品型錄設計</div>
+            <div class="g-client">Client — Auric Watches</div>
+          </div>
+        </div>
+      </div>
+      <div class="g-card-info">
+        <div class="gci-left"><div class="gci-name">Auric Watches</div><div class="gci-sub">平面印刷 · 2024</div></div>
+        <div class="gci-arrow">→</div>
+      </div>
+    </div>
+
+    <!-- 12 -->
+    <div class="g-item reveal reveal-d3" data-cat="social" data-id="12">
+      <div class="g-thumb">
+        <div class="g-visual pal12" style="aspect-ratio:4/3;">
+          <div class="g-visual-inner">
+            <div style="display:flex;gap:8px;align-items:flex-end;">
+              <div style="width:20px;background:rgba(201,168,76,.12);height:40px;"></div>
+              <div style="width:20px;background:rgba(201,168,76,.18);height:60px;"></div>
+              <div style="width:20px;background:rgba(201,168,76,.22);height:50px;"></div>
+              <div style="width:20px;background:rgba(201,168,76,.1);height:35px;"></div>
+              <div style="width:20px;background:rgba(201,168,76,.25);height:70px;"></div>
+            </div>
+          </div>
+        </div>
+        <div class="g-overlay">
+          <div class="g-meta-top"><span class="g-badge">2023</span><span class="g-badge">FB廣告</span></div>
+          <div class="g-info">
+            <div class="g-cat">Social Advertising</div>
+            <div class="g-title">Soleil Facebook 廣告活動</div>
+            <div class="g-client">Client — Soleil Café</div>
+          </div>
+        </div>
+      </div>
+      <div class="g-card-info">
+        <div class="gci-left"><div class="gci-name">Soleil Café</div><div class="gci-sub">社群廣告 · 2023</div></div>
+        <div class="gci-arrow">→</div>
+      </div>
+    </div>
+
+  </div><!-- /masonry -->
+</section>
+
+<!-- LOAD MORE -->
+<div id="load-more-wrap">
+  <button class="load-more-btn"><span>載入更多作品</span></button>
+</div>
+
+<!-- LIGHTBOX -->
+<div id="lightbox">
+  <button class="lb-close" id="lb-close">✕</button>
+  <button class="lb-nav lb-prev" id="lb-prev">‹</button>
+  <button class="lb-nav lb-next" id="lb-next">›</button>
+  <div class="lb-inner">
+    <div class="lb-visual" id="lb-visual">
+      <div class="lb-bg" id="lb-bg"></div>
+      <div class="lb-deco">
+        <div class="lb-deco-ring" id="lb-icon">◈</div>
+        <div class="lb-deco-label">作品預覽</div>
+      </div>
+    </div>
+    <div class="lb-info">
+      <div>
+        <div class="lb-eyebrow" id="lb-cat">Brand Identity</div>
+        <h2 class="lb-title" id="lb-title">Luxe Maison 品牌識別系統</h2>
+        <div class="lb-client" id="lb-client">Client — Luxe Maison Taipei · 2024</div>
+        <div class="lb-divider"></div>
+        <p class="lb-desc" id="lb-desc">以奢華美學為核心，打造完整的品牌識別系統，包含主視覺、輔助圖形、色彩系統與字型規範，為品牌在高端市場建立獨特且一致的視覺語言。</p>
+        <div class="lb-tags" id="lb-tags">
+          <span class="lb-tag">Logo Design</span>
+          <span class="lb-tag">VI System</span>
+          <span class="lb-tag">Brand Guide</span>
+          <span class="lb-tag">Typography</span>
+        </div>
+      </div>
+      <div class="lb-actions">
+        <button class="lb-btn">查看完整案例</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="ft-logo">STUDIO <em>Aurum</em></div>
+  <div class="ft-copy">© 2025 Studio Aurum. All rights reserved.</div>
+  <div class="ft-socials">
+    <a href="#" class="ft-s">ig</a>
+    <a href="https://www.facebook.com/share/18s5e3B85C/" target="_blank" rel="noopener" class="ft-s">fb</a>
+    <a href="#" class="ft-s">be</a>
+    <a href="#" class="ft-s">li</a>
+  </div>
+</footer>
+
+<script>
+// ── CURSOR ──
+const cur=document.getElementById('cur'),ring=document.getElementById('cur-ring');
+let mx=0,my=0,rx=0,ry=0;
+document.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY;cur.style.left=mx+'px';cur.style.top=my+'px';});
+(function animRing(){rx+=(mx-rx)*.12;ry+=(my-ry)*.12;ring.style.left=rx+'px';ring.style.top=ry+'px';requestAnimationFrame(animRing);})();
+
+// ── SCROLL REVEAL ──
+const obs=new IntersectionObserver(e=>{e.forEach(x=>{if(x.isIntersecting)x.target.classList.add('visible');});},{threshold:0.1});
+document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+
+// ── FILTER ──
+const items=document.querySelectorAll('.g-item');
+document.querySelectorAll('.flt').forEach(btn=>{
+  btn.addEventListener('click',()=>{
+    document.querySelectorAll('.flt').forEach(b=>b.classList.remove('on'));
+    btn.classList.add('on');
+    const cat=btn.dataset.cat;
+    items.forEach(item=>{
+      const show=cat==='all'||item.dataset.cat===cat;
+      item.style.opacity=show?'1':'0.15';
+      item.style.pointerEvents=show?'all':'none';
+      item.style.transform=show?'':'scale(0.97)';
+    });
+  });
+});
+
+// ── VIEW TOGGLE ──
+const masonry=document.getElementById('masonry');
+document.querySelectorAll('.vtgl').forEach(btn=>{
+  btn.addEventListener('click',()=>{
+    document.querySelectorAll('.vtgl').forEach(b=>b.classList.remove('on'));
+    btn.classList.add('on');
+    const col=btn.dataset.col;
+    masonry.className='g-masonry'+(col!=='3'?' col'+col:'');
+  });
+});
+
+// ── LIGHTBOX DATA ──
+const data={
+  1:{cat:'Brand Identity',title:'Luxe Maison 品牌識別系統',client:'Client — Luxe Maison Taipei · 2024',desc:'以奢華美學為核心，打造完整品牌識別系統，包含主視覺、輔助圖形、色彩系統與字型規範，為品牌建立獨特的高端視覺語言。',tags:['Logo Design','VI System','Brand Guide','Typography'],pal:'pal1',icon:'◈'},
+  2:{cat:'UI / UX Design',title:'Artisan App 介面設計',client:'Client — Artisan Co. · 2024',desc:'從用戶研究出發，設計直覺且精緻的手機應用介面，將品牌美學延伸至數位體驗，提升用戶留存率 42%。',tags:['Mobile UI','UX Research','Prototype','Figma'],pal:'pal2',icon:'◉'},
+  3:{cat:'Print Design',title:'Noir 系列包裝設計',client:'Client — Noir Cosmetics · 2023',desc:'為高端美妝品牌設計全系列包裝，以極簡黑金配色傳達奢華質感，統一品牌在零售通路的視覺呈現。',tags:['Packaging','Print','3D Mockup','Editorial'],pal:'pal3',icon:'▣'},
+  4:{cat:'Social Advertising',title:'VELA 社群廣告系列',client:'Client — VELA Beauty · 2024',desc:'為美妝品牌打造 IG/FB 廣告素材系列，統一視覺語言並針對不同受眾優化設計，廣告點擊率提升 68%。',tags:['Instagram','Facebook','Motion','Copy'],pal:'pal4',icon:'◆'},
+  5:{cat:'Logo Design',title:'Essence LOGO 完整系統',client:'Client — Essence Studio · 2024',desc:'從品牌核心價值出發，創作具有深度的標誌系統，含主標、輔助標、黑白版與最小尺寸規範。',tags:['Logo','Symbol','Wordmark','Brand Rules'],pal:'pal5',icon:'✦'},
+  6:{cat:'UI / UX Design',title:'Tempo 電商平台介面',client:'Client — Tempo Commerce · 2023',desc:'為時尚電商平台重新設計購物流程，優化結帳轉換路徑，上線後購物車完成率提升 35%。',tags:['E-commerce','Web UI','Checkout Flow','A/B Test'],pal:'pal6',icon:'◈'},
+  7:{cat:'Print Design',title:'Maré 名片與文具設計',client:'Client — Maré Agency · 2023',desc:'為創意代理商打造完整紙本識別，包含名片、信封、信紙與簡報封面，以燙金工藝突顯精品質感。',tags:['Business Card','Stationery','Foil Print','Letterhead'],pal:'pal7',icon:'▣'},
+  8:{cat:'Social Advertising',title:'Céleste IG 廣告素材',client:'Client — Céleste Jewellery · 2024',desc:'珠寶品牌 Instagram 廣告素材全套設計，以光影質感呈現產品奢華感，廣告 ROAS 達 4.2x。',tags:['Instagram Ads','Product Photography','Reels Cover','Stories'],pal:'pal8',icon:'✦'},
+  9:{cat:'Brand Identity',title:'Minimal Studio 視覺識別',client:'Client — Minimal Studio · 2023',desc:'以極簡主義為核心哲學，建立乾淨有力的品牌識別，讓「少即是多」成為品牌最強的視覺語言。',tags:['Logo','Minimal Design','Brand System','Colour'],pal:'pal9',icon:'◈'},
+  10:{cat:'UI / UX Design',title:'Foresta 品牌網站設計',client:'Client — Foresta Organic · 2023',desc:'有機生活品牌官網全案設計，從資訊架構到互動細節，以自然有機美學融合精品設計質感。',tags:['Web Design','UI/UX','CMS','Webflow'],pal:'pal10',icon:'◉'},
+  11:{cat:'Editorial Design',title:'Auric 精品型錄設計',client:'Client — Auric Watches · 2024',desc:'腕錶品牌年度型錄設計，精緻版面編排搭配高質感攝影指導，呈現品牌百年工藝傳承精神。',tags:['Catalogue','Editorial','Art Direction','Print'],pal:'pal11',icon:'▣'},
+  12:{cat:'Social Advertising',title:'Soleil Facebook 廣告活動',client:'Client — Soleil Café · 2023',desc:'咖啡品牌季節性 Facebook 廣告活動設計，統一視覺主題並融入產品特色，觸及率提升 120%。',tags:['Facebook Ads','Campaign','Seasonal','Copy'],pal:'pal12',icon:'◆'},
+};
+
+let currentId=1;
+const lb=document.getElementById('lightbox');
+const lbBg=document.getElementById('lb-bg');
+const lbIcon=document.getElementById('lb-icon');
+
+function openLightbox(id){
+  currentId=id;
+  const d=data[id];
+  document.getElementById('lb-cat').textContent=d.cat;
+  document.getElementById('lb-title').textContent=d.title;
+  document.getElementById('lb-client').textContent=d.client;
+  document.getElementById('lb-desc').textContent=d.desc;
+  lbBg.className='lb-bg '+d.pal;
+  lbIcon.textContent=d.icon;
+  lbIcon.style.cssText='';
+  const tagsEl=document.getElementById('lb-tags');
+  tagsEl.innerHTML=d.tags.map(t=>`<span class="lb-tag">${t}</span>`).join('');
+  lb.classList.add('open');
+  document.body.style.overflow='hidden';
+}
+function closeLightbox(){lb.classList.remove('open');document.body.style.overflow='';}
+
+document.querySelectorAll('.g-item').forEach(item=>{
+  item.addEventListener('click',()=>openLightbox(+item.dataset.id));
+});
+document.getElementById('lb-close').addEventListener('click',closeLightbox);
+lb.addEventListener('click',e=>{if(e.target===lb)closeLightbox();});
+document.getElementById('lb-prev').addEventListener('click',()=>{currentId=currentId>1?currentId-1:12;openLightbox(currentId);});
+document.getElementById('lb-next').addEventListener('click',()=>{currentId=currentId<12?currentId+1:1;openLightbox(currentId);});
+document.addEventListener('keydown',e=>{
+  if(!lb.classList.contains('open'))return;
+  if(e.key==='Escape')closeLightbox();
+  if(e.key==='ArrowLeft'){currentId=currentId>1?currentId-1:12;openLightbox(currentId);}
+  if(e.key==='ArrowRight'){currentId=currentId<12?currentId+1:1;openLightbox(currentId);}
+});
+</script>
+</body>
+</html>
