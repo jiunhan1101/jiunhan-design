@@ -45,10 +45,10 @@ nav{position:fixed;top:0;left:0;right:0;z-index:1000;padding:28px 64px;display:f
 /* Portrait frame */
 .portrait-wrap{position:relative;width:400px;height:500px;opacity:0;animation:riseIn 1.2s var(--ease) .5s forwards;}
 .portrait-outer{position:absolute;inset:0;border:1px solid rgba(201,168,76,.2);}
-.portrait-inner{position:absolute;inset:18px;background:linear-gradient(145deg,#131005,#1e1a08,#0c0b07);overflow:hidden;display:flex;align-items:center;justify-content:center;}
+.portrait-inner{position:absolute;inset:18px;overflow:hidden;display:flex;align-items:center;justify-content:center;}
 .portrait-mono{font-family:'Playfair Display',serif;font-size:200px;font-style:italic;color:rgba(201,168,76,.05);position:absolute;line-height:1;user-select:none;}
 .portrait-content{position:relative;z-index:2;text-align:center;display:flex;flex-direction:column;align-items:center;gap:16px;}
-.portrait-avatar{width:120px;height:120px;border-radius:50%;border:1px solid rgba(201,168,76,.4);display:flex;align-items:center;justify-content:center;font-size:48px;color:rgba(201,168,76,.55);background:rgba(201,168,76,.04);}
+.portrait-avatar{width:100%;height:100%;object-fit:cover;object-position:center top;display:block;}
 .portrait-name{font-family:'Playfair Display',serif;font-size:26px;font-style:italic;color:rgba(245,241,232,.7);}
 .portrait-title{font-size:10px;letter-spacing:.4em;text-transform:uppercase;color:var(--gold);opacity:.65;}
 .portrait-line{width:40px;height:1px;background:rgba(201,168,76,.3);}
@@ -256,7 +256,7 @@ footer{padding:52px 64px;border-top:1px solid var(--gold-dim);display:flex;justi
   <ul class="nav-links">
     <li><a href="https://jiunhan1101.github.io/jiunhan-design/services.html">服務項目</a></li>
     <li><a href="https://jiunhan1101.github.io/jiunhan-design/gallery.html">作品集</a></li>
-    <li><a href="#" class="active">關於我</a></li>
+    <li><a href="https://jiunhan1101.github.io/jiunhan-design/about.html" class="active">關於我</a></li>
   </ul>
   <a href="https://jiunhan1101.github.io/jiunhan-design/contact.html" class="nav-cta">開始合作</a>
 </nav>
@@ -285,8 +285,8 @@ footer{padding:52px 64px;border-top:1px solid var(--gold-dim);display:flex;justi
       </div>
       <div class="portrait-inner">
         <div class="portrait-mono">J</div>
-        <div class="portrait-content">
-          <div class="portrait-avatar">✦</div>
+        <img src="https://jiunhan1101.github.io/jiunhan-design/photo.jpg" alt="Jiunhan" class="portrait-avatar">
+        <div class="portrait-content" style="position:absolute;bottom:0;left:0;right:0;background:linear-gradient(to top,rgba(0,0,0,.85),transparent);padding:28px 24px;">
           <div class="portrait-name">Jiunhan</div>
           <div class="portrait-title">Brand Website Designer</div>
           <div class="portrait-line"></div>

@@ -445,4 +445,16 @@ function updateBudget(v){
 // Submit
 function submitForm(){
   document.getElementById('form-wrap').style.display='none';
-  
+  document.querySelector('.form-eyebrow').style.display='none';
+  document.querySelector('.form-steps').style.display='none';
+  document.querySelector('.form-progress').style.display='none';
+  const s=document.getElementById('success-state');
+  s.style.display='block';
+  s.style.opacity='0';
+  s.style.transform='translateY(24px)';
+  s.style.transition='all .8s cubic-bezier(0.23,1,0.32,1)';
+  setTimeout(()=>{s.style.opacity='1';s.style.transform='translateY(0)';},50);
+}
+</script>
+</body>
+</html>
